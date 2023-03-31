@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ChampagnePink">#FFE5D9</color>
+    <color name="Apricot">#FEC89A</color>
+    <color name="PinkMelon">#FEC5BB</color>
+    <color name="Xanthous">#F9AF09</color>
+    <color name="RoseRed">#C9184A</color>
+    <color name="Fuschia">#FF4D6D</color>
+    <color name="MutedFuschia">#FF758F</color>
+    <color name="SaffronYellow">#EAC250</color>
+    <color name="BurntSienna">#DF8560</color>
+    <color name="CelestialBlue">#4899C6</color>
 </resources>
