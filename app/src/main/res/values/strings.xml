@@ -1,3 +1,62 @@
 <resources>
     <string name="app_name">MoG-0423</string>
+    <string name="gameTitle">A Merchant of Geminaria</string>
+    <!--City Names-->
+    <string name="city_Rubya">Rubya</string>
+    <string name="city_Tourmalina">Tourmalina</string>
+    <string name="city_Sapphira">Sapphira</string>
+    <string name="city_Emeraldis">Emeraldis</string>
+    <string name="city_Diamondaria">Diamondaria</string>
+    <string name="city_JadeEmpire">Jade Empire</string>
+    <string name="city_OnyxCoast">Onyx Coast</string>
+    <string name="city_Opalancy">Opalancy</string>
+    <string name="city_AmethystCity">Amethyst City</string>
+    <string name="city_Agatia">Agatia</string>
+    <!--Merchant Names-->
+    <string name="merchant_Kareem">Kareem Roman</string>
+    <string name="merchant_Maja">Maja Hansen</string>
+    <string name="merchant_Oisin">Oisin David</string>
+    <string name="merchant_Zakiya">Zakiya Melendez</string>
+    <string name="merchant_Jan">Jan Herrera</string>
+    <string name="merchant_Uzair">Uzair Orozco</string>
+    <string name="merchant_Milena">Milena Morhen</string>
+    <string name="merchant_Khalil">Khalil Parrish</string>
+    <string name="merchant_Vera">Vera Robles</string>
+    <string name="merchant_Regan">Regan Bowers</string>
+    <string name="merchant_Serrano">Serrano Khan</string>
+    <string name="merchant_Aryan">Aryan Duke</string>
+    <string name="merchant_Chaya">Chaya Luna</string>
+    <string name="merchant_Zuzanna">Zuzanna Estel</string>
+    <string name="merchant_Rowan">Rowan Fischer</string>
+    <!--Commodity/Item Names (30 of 52 images)-->
+    <string name="commodity_apple">Apple Plate</string>
+    <string name="commodity_apricot">Apricot</string>
+    <string name="commodity_artichoke">Artichoke</string>
+    <string name="commodity_asparagus">Asparagus</string>
+    <string name="commodity_banana">Banana</string>
+    <string name="commodity_beet">Beet</string>
+    <string name="commodity_blueberries">Blueberries</string>
+    <string name="commodity_bokchoy">Bok Choy</string>
+    <string name="commodity_broccoli">Broccoli</string>
+    <string name="commodity_cabbage">Cabbage</string>
+    <string name="commodity_carrot">Carrot</string>
+    <string name="commodity_cashew">Cashew</string>
+    <string name="commodity_cauliflower">Cauliflower</string>
+    <string name="commodity_celery">Celery</string>
+    <string name="commodity_cherry">Cherry</string>
+    <string name="commodity_coconut">Coconut</string>
+    <string name="commodity_corn">Corn</string>
+    <string name="commodity_dragonFruit">Dragon Fruit</string>
+    <string name="commodity_eggplant">Eggplant</string>
+    <string name="commodity_flax">Flax Seeds</string>
+    <string name="commodity_garlic">Garlic</string>
+    <string name="commodity_grapes">Grapes</string>
+    <string name="commodity_hazelnut">Hazelnut</string>
+    <string name="commodity_leek">Leek</string>
+    <string name="commodity_lentil">Lentil</string>
+    <string name="commodity_lettuce">Romaine Lettuce</string>
+    <string name="commodity_mango">Mango</string>
+    <string name="commodity_mushroom">Mushroom</string>
+    <string name="commodity_olive">Olive</string>
+    <string name="commodity_orange">Orange</string>
 </resources>
