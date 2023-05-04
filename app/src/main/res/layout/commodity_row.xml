@@ -259,7 +259,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icons8_carrot_1002" />
+                app:srcCompat="@drawable/basket_of_carrots" />
 
             <ImageView
                 android:id="@+id/coins_image"
