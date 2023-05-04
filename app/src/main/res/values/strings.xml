@@ -2,6 +2,7 @@
     <string name="app_name">MoG-0423</string>
     <string name="gameTitle">A Merchant of Geminaria</string>
     <!--City Names-->
+    <string-array name="city_names_list">
     <string name="city_Rubya">Rubya</string>
     <string name="city_Tourmalina">Tourmalina</string>
     <string name="city_Sapphira">Sapphira</string>
@@ -12,7 +13,9 @@
     <string name="city_Opalancy">Opalancy</string>
     <string name="city_AmethystCity">Amethyst City</string>
     <string name="city_Agatia">Agatia</string>
+</string-array>
     <!--Merchant Names-->
+    <string-array name="merchant_names_list">
     <string name="merchant_Kareem">Kareem Roman</string>
     <string name="merchant_Maja">Maja Hansen</string>
     <string name="merchant_Oisin">Oisin David</string>
@@ -28,7 +31,9 @@
     <string name="merchant_Chaya">Chaya Luna</string>
     <string name="merchant_Zuzanna">Zuzanna Estel</string>
     <string name="merchant_Rowan">Rowan Fischer</string>
+    </string-array>
     <!--Commodity/Item Names (30 of 52 images)-->
+    <string-array name="commodity_names_list">
     <string name="commodity_apple">Apple Plate</string>
     <string name="commodity_apricot">Apricot</string>
     <string name="commodity_artichoke">Artichoke</string>
@@ -58,5 +63,11 @@
     <string name="commodity_mango">Mango</string>
     <string name="commodity_mushroom">Mushroom</string>
     <string name="commodity_olive">Olive</string>
+    <string name="commodity_onion">Onion</string>
     <string name="commodity_orange">Orange</string>
+    </string-array>
+    <string-array name="Credits">
+        <string name="icons8"></string>
+        <string name="Number generator">https://www.rangen.co.uk/misc/numbergen.php</string>
+    </string-array>
 </resources>
