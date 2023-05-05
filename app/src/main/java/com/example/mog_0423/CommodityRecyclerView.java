@@ -3,6 +3,8 @@ package com.example.mog_0423;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -22,6 +24,7 @@ public class CommodityRecyclerView extends AppCompatActivity {
             R.drawable.icons8_leek_100,R.drawable.icons8_lentil_100,R.drawable.icons8_lettuce_100
             ,R.drawable.icons8_mango_100,R.drawable.icons8_mushroom_100,
             R.drawable.icons8_olive_100,R.drawable.icons8_onion_100,R.drawable.icons8_orange_100};
+
     //R.drawable.icons8_peach_100,R.drawable.icons8_peanuts_100,R.drawable.icons8_pear_100,
     //            R.drawable.icons8_peas_100,R.drawable.icons8_pecan_100,
     //            R.drawable.icons8_pineapple_100,R.drawable.icons8_plum_100,
@@ -33,9 +36,16 @@ public class CommodityRecyclerView extends AppCompatActivity {
 
     protected void OnCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.screen_home);
+        setContentView(R.layout.commodity_recyclerview);
+
+        RecyclerView recyclerView = findViewById(R.id.commodityRecyclerView);
 
         setUpCommodityList();
+
+        CommodityRecyclerViewAdapter adapter = new CommodityRecyclerViewAdapter(this,
+                commodityList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void setUpCommodityList() {

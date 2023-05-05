@@ -1,17 +1,19 @@
 package com.example.mog_0423;
 
-public class Commodity {
+class Commodity {
     String commodityName;
     String commodityLocation;
     int commodityPrice;
     int commodityImage;
 
-    public Commodity(String commodityName, String commodityLocation, int commodityPrice, int commodityImage) {
+    public Commodity(String commodityName, String commodityLocation, int commodityPrice,
+                      int commodityImage) {
         this.commodityName = commodityName;
         this.commodityLocation = commodityLocation;
         this.commodityPrice = commodityPrice;
         this.commodityImage = commodityImage;
     }
+
 
     public String getCommodityName() {
         return commodityName;
