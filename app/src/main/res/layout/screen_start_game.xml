@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pexels_codioful__formerly_gradienta__7130537">
+
+    <TextView
+        android:id="@+id/beginningStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:text="@string/beginning_story"
+        android:textAlignment="center"
+        android:textColor="@color/Onyx"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="602dp" />
+
+    <TextView
+        android:id="@+id/goalToWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goalPt_1"
+        android:textAlignment="center"
+        android:textColor="@color/Onyx"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="302dp" />
+
+    <TextView
+        android:id="@+id/goalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="goalList"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lossCondition"
+        android:textAlignment="center"
+        android:textColor="@color/Onyx"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/luck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goodLuck"
+        android:textAlignment="center"
+        android:textColor="@color/Onyx"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="538dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

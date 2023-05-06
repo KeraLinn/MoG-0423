@@ -1,5 +1,6 @@
 package com.example.mog_0423;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,10 +33,9 @@ public class createNewGame extends AppCompatActivity {
             playerName = getPlayerName();
             difficultyLevel = getDifficultyLevel();
             profileImage = getProfileImage();
+            startActivity(new Intent(createNewGame.this, startNewGame.class));
         });
     }
-
-
 
     String getPlayerName() {
         return player.toString();

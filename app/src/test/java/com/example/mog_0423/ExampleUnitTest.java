@@ -1,8 +1,11 @@
 package com.example.mog_0423;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+
+import android.app.Activity;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
