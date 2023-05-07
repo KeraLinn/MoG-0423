@@ -20,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
         newGameButton.setOnClickListener((View v)-> startActivity(new Intent(MainActivity.this,
                 createNewGame.class)));
         Button continueGameButton = findViewById(R.id.continueButton);
-        continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity.this, CommodityRecyclerView.class)));
-
+        continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
+                .this, cityArrival.class)));
+        Button tempButton = findViewById(R.id.tempButton);
+        tempButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity.this,
+                CommodityRecyclerView.class)));
     }
 
 }

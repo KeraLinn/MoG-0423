@@ -21,9 +21,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommodityRecyclerView">
-
         </activity>
-        <activity android:name="createNewGame">
+        <activity android:name=".createNewGame">
+        </activity>
+        <activity android:name=".startNewGame">
+        </activity>
+        <activity android:name=".merchantInteraction">
+        </activity>
+        <activity android:name=".cityArrival">
         </activity>
         <meta-data
             android:name="preloaded_fonts"

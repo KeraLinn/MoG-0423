@@ -15,20 +15,11 @@ public class createNewGame extends AppCompatActivity {
     int difficultyLevel;
     int profileImage;
 
-    EditText player = findViewById(R.id.editTextTextPersonName2);
-    ImageButton avatar1 = findViewById(R.id.imageButton3);
-    ImageButton avatar2 = findViewById(R.id.imageButton4);
-    ImageButton avatar3 = findViewById(R.id.imageButton5);
-    ImageButton avatar4 = findViewById(R.id.imageButton6);
-    Button completeButton = findViewById(R.id.startButton);
-    CheckBox easyCheck = findViewById(R.id.easyCheck);
-    CheckBox mediumCheck = findViewById(R.id.mediumCheck);
-    CheckBox hardCheck = findViewById(R.id.hardcheck);
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_new_game);
 
+        Button completeButton = findViewById(R.id.startButton);
         completeButton.setOnClickListener((View v) -> {
             playerName = getPlayerName();
             difficultyLevel = getDifficultyLevel();
@@ -38,9 +29,18 @@ public class createNewGame extends AppCompatActivity {
     }
 
     String getPlayerName() {
-        return player.toString();
+        EditText player = findViewById(R.id.editTextTextPersonName2);
+        String tempString = player.toString();
+        if (tempString.isEmpty()){
+            tempString = "Haven";
+        }
+        return tempString;
     }
     int getDifficultyLevel(){
+        CheckBox easyCheck = findViewById(R.id.easyCheck);
+        CheckBox mediumCheck = findViewById(R.id.mediumCheck);
+        CheckBox hardCheck = findViewById(R.id.hardcheck);
+
         if (mediumCheck.isChecked()){
             return 2;
         }
@@ -54,6 +54,10 @@ public class createNewGame extends AppCompatActivity {
         }
     }
     int getProfileImage() {
+        ImageButton avatar1 = findViewById(R.id.imageButton3);
+        ImageButton avatar2 = findViewById(R.id.imageButton4);
+        ImageButton avatar3 = findViewById(R.id.imageButton5);
+        ImageButton avatar4 = findViewById(R.id.imageButton6);
         if (avatar1.isSelected()){
             return avatar1.getId();
         }

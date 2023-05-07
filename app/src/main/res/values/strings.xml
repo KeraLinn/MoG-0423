@@ -75,5 +75,8 @@
         <string name="goalPt_2">and retire into the lap of luxury!</string>
         <string name="lossCondition">Be careful! If you spend all your money, you will lose the game!</string>
         <string name="goodLuck">Good luck!</string>
-
+    <!--City Text -->
+    <string name="rubyaWelcome">Welcome to Rubya!</string>
+    <string name="rubyaText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!
+</string>
 </resources>

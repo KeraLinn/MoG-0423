@@ -33,7 +33,6 @@ public class CommodityRecyclerView extends AppCompatActivity {
     //            R.drawable.icons8_squash_100,R.drawable.icons8_strawberry_100,
     //            R.drawable.icons8_tomato_100,R.drawable.icons8_white_beans_100,R.drawable.icons8_zucchini_100;
 
-
     protected void OnCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.commodity_recyclerview);

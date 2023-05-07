@@ -8,13 +8,17 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class cityArrival extends AppCompatActivity {
-    Button tradeButton = findViewById(R.id.tradebutton);
-    Button nextCityButton = findViewById(R.id.nextCityButton);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_city_arrival_1_merchant);
+
+        Button tradeButton = findViewById(R.id.tradebutton);
+        Button nextCityButton = findViewById(R.id.nextCityButton);
+
+
 
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival.this,
                 merchantInteraction.class
