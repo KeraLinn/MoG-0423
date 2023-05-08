@@ -10,10 +10,13 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.File;
+
 public class createNewGame extends AppCompatActivity {
     String playerName;
     int difficultyLevel;
     int profileImage;
+    protected File newFile;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,17 +27,17 @@ public class createNewGame extends AppCompatActivity {
             playerName = getPlayerName();
             difficultyLevel = getDifficultyLevel();
             profileImage = getProfileImage();
+            newFile = new File(playerName);
             startActivity(new Intent(createNewGame.this, startNewGame.class));
         });
     }
 
     String getPlayerName() {
         EditText player = findViewById(R.id.editTextTextPersonName2);
-        String tempString = player.toString();
-        if (tempString.isEmpty()){
-            tempString = "Haven";
+        if (player.toString().isEmpty()){
+            player.setText("Haven");
         }
-        return tempString;
+        return player.toString();
     }
     int getDifficultyLevel(){
         CheckBox easyCheck = findViewById(R.id.easyCheck);

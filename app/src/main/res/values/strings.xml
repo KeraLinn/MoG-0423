@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">MoG-0423</string>
     <string name="gameTitle">A Merchant of Geminaria</string>
+    <string name="new_game_warning_dialog_title">Wait!</string>
+
     <!--City Names-->
     <string-array name="city_names_list">
         <item name="city_Rubya">Rubya</item>
@@ -76,7 +78,7 @@
         <string name="lossCondition">Be careful! If you spend all your money, you will lose the game!</string>
         <string name="goodLuck">Good luck!</string>
     <!--City Text -->
-    <string name="rubyaWelcome">Welcome to Rubya!</string>
-    <string name="rubyaText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!
+    <string name="sapphiraWelcome">Welcome to Rubya!</string>
+    <string name="sapphiraText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!
 </string>
 </resources>
