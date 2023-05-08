@@ -1,5 +1,6 @@
 package com.example.mog_0423;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,7 @@ public class createNewGame extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     String getPlayerName() {
         EditText player = findViewById(R.id.editTextTextPersonName2);
         if (player.toString().isEmpty()){

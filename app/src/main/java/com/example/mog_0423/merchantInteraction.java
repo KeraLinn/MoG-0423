@@ -11,18 +11,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Dictionary;
 
 public class merchantInteraction extends AppCompatActivity {
+    int playerBuying;
+    int playerSelling;
+    NumberPicker merchantPickerItem1 = new NumberPicker(this);
+    NumberPicker merchantPickerItem2 = new NumberPicker(this);
+    NumberPicker merchantPickerItem3 = new NumberPicker(this);
+    NumberPicker playerPickerItem1 = new NumberPicker(this);
+    NumberPicker playerPickerItem2 = new NumberPicker(this);
+    NumberPicker playerPickerItem3 = new NumberPicker(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
 
-        setUpTradingAspects();
 
+        merchantPickerItem1 = findViewById(R.id.merPick1);
+        merchantPickerItem2 = findViewById(R.id.merPick2);
+        merchantPickerItem3 = findViewById(R.id.merPick3);
+        playerPickerItem1 = findViewById(R.id.merPick4);
+        playerPickerItem2 = findViewById(R.id.merPick5);
+        playerPickerItem3 = findViewById(R.id.merPick6);
 
 
         Button doneButton = findViewById(R.id.completeTradeButton);
         doneButton.setOnClickListener((View v) -> {
-
+            completeTransaction();
 
             startActivity(new Intent(merchantInteraction.this,
                     cityArrival.class));
@@ -30,20 +44,11 @@ public class merchantInteraction extends AppCompatActivity {
 
     }
 
-    public void setUpTradingAspects(){
-        NumberPicker merchantPickerItem1 = new NumberPicker(this);
-        merchantPickerItem1 = findViewById(R.id.merPick1);
+    private void completeTransaction() {
+        playerBuying =
+                merchantPickerItem1.getValue() + merchantPickerItem2.getValue() + merchantPickerItem3.getValue();
+        playerSelling =
+                playerPickerItem1.getValue() + playerPickerItem2.getValue() + playerPickerItem3.getValue();
 
-        NumberPicker merchantPickerItem2 = new NumberPicker(this);
-        merchantPickerItem2 = findViewById(R.id.merPick2);
-        NumberPicker merchantPickerItem3 = new NumberPicker(this);
-        merchantPickerItem3 = findViewById(R.id.merPick3);
-        NumberPicker playerPickerItem1 = new NumberPicker(this);
-        playerPickerItem1 = findViewById(R.id.merPick4);
-        NumberPicker playerPickerItem2 = new NumberPicker(this);
-        playerPickerItem2 = findViewById(R.id.merPick5);
-        NumberPicker playerPickerItem3 = new NumberPicker(this);
-        playerPickerItem3 = findViewById(R.id.merPick6);
     }
-
 }

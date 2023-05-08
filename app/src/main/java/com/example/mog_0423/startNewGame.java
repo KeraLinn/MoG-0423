@@ -20,9 +20,10 @@ public class startNewGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_start_game);
 
+        Merchant merchant = new Merchant("","","",0);
+        merchant.getAllMerchants();
 
         Button continueButton = findViewById(R.id.continueButton);
-
         continueButton.setOnClickListener((View v) -> startActivity(new Intent(startNewGame.this,
                 cityArrival.class
                 )));
