@@ -72,13 +72,14 @@
         <item name="icons8">icons8.com</item>
         <item name="Number generator">https://www.rangen.co.uk/misc/numbergen.php</item>
     </string-array>
-        <string name="beginning_story">Hello Merchant!\n\nWelcome to Geminaria!\n\nYou are embarking on a new adventure to write your name in piles of gold and the annals of history!</string>
-        <string name="goalPt_1">Your goal is:</string>
-        <string name="goalPt_2">and retire into the lap of luxury!</string>
-        <string name="lossCondition">Be careful! If you spend all your money, you will lose the game!</string>
-        <string name="goodLuck">Good luck!</string>
+    <string name="beginning_story">Hello Merchant!\n\nWelcome to Geminaria!\n\nYou are embarking on a new adventure to write your name in piles of gold and the annals of history!</string>
+    <string name="goalPt_1">Your goal is:</string>
+    <string name="goalPt_2">and retire into the lap of luxury!</string>
+    <string name="lossCondition">Be careful! If you spend all your money, you will lose the game!</string>
+    <string name="goodLuck">Good luck!</string>
     <!--City Text -->
     <string name="sapphiraWelcome">Welcome to Rubya!</string>
     <string name="sapphiraText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!
 </string>
+    <string name="you_won">You did it! You earned enough Gold to retire in luxury!\n\nYour name will be in the Merchant Guild’s annals as one of the Successful Ones, and you will be recognized as a symbol of hope to upcoming Merchants!</string>
 </resources>
