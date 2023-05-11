@@ -1,33 +1,50 @@
 package com.example.mog_0423;
 
+import static com.example.mog_0423.R.id.radioButtonB;
+import static com.example.mog_0423.R.id.radioButtonC;
+import static com.example.mog_0423.R.id.radioButtonE;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 
-public class createNewGame extends AppCompatActivity {
+public class createNewGame extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String playerName;
     int difficultyLevel;
     int profileImage;
     protected File newFile;
 
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_new_game);
+        Spinner difficultySpinner = findViewById(R.id.DifficultySpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.difficultyList, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        difficultySpinner.setAdapter(adapter);
+        difficultySpinner.setOnItemSelectedListener(this);
+
+
 
         Button completeButton = findViewById(R.id.startButton);
         completeButton.setOnClickListener((View v) -> {
             playerName = getPlayerName();
-            difficultyLevel = getDifficultyLevel();
-            profileImage = getProfileImage();
             newFile = new File(playerName);
             startActivity(new Intent(createNewGame.this, startNewGame.class));
         });
@@ -41,10 +58,8 @@ public class createNewGame extends AppCompatActivity {
         }
         return player.toString();
     }
-    int getDifficultyLevel(){
-        CheckBox easyCheck = findViewById(R.id.easyCheck);
-        CheckBox mediumCheck = findViewById(R.id.mediumCheck);
-        CheckBox hardCheck = findViewById(R.id.hardcheck);
+    /*int getDifficultyLevel(){
+
 
         if (mediumCheck.isChecked()){
             return 2;
@@ -56,30 +71,52 @@ public class createNewGame extends AppCompatActivity {
         else {
             easyCheck.setChecked(true);
             return 1;
-        }
-    }
-    int getProfileImage() {
-        ImageButton avatar1 = findViewById(R.id.imageButton3);
-        ImageButton avatar2 = findViewById(R.id.imageButton4);
-        ImageButton avatar3 = findViewById(R.id.imageButton5);
-        ImageButton avatar4 = findViewById(R.id.imageButton6);
-        if (avatar1.isSelected()){
-            return avatar1.getId();
-        }
-        else if (avatar2.isSelected()){
-            return avatar2.getId();
-        }
-        else if (avatar3.isSelected()){
-            return avatar3.getId();
-        }
-        else if (avatar4.isSelected()){
-            return avatar4.getId();
-        }
-        return 0;
+        }*/
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+       difficultyLevel = (int) parent.getItemAtPosition(position);
     }
 
-
-
-
-
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+       difficultyLevel = (int) parent.getItemIdAtPosition(1);
+    }
+    @SuppressLint("NonConstantResourceId")
+    public void onRadioButtonClicked(View v) {
+        //boolean checked = ((RadioButton) v).isChecked();
+        //int checkedId = v.getId();
+        switch (v.getId()) {
+            case radioButtonB:
+                profileImage = radioButtonB;
+                break;
+/*            case R.id.radioGroup1:
+                switch(checkedId) {*/
+                    /*case radioButtonB:
+                        profileImage = radioButtonB;
+                        break;*/
+            case radioButtonC:
+                profileImage = radioButtonC;
+                break;
+            case radioButtonE:
+                profileImage = radioButtonE;
+                break;
+/*                }
+                break;*/
+/*            case R.id.radioGroup2:
+                switch(checkedId){*/
+                  /*  case radioButtonH:
+                        profileImage = radioButtonH;
+                        break;
+                    case radioButtonBlue:
+                        profileImage = radioButtonBlue;
+                        break;
+                    case radioButtonDragon:
+                        profileImage = radioButtonDragon;
+                        break;
+                }*/
+            // break;
+        }
+    }
 }
+

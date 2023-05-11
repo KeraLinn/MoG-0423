@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 .this, cityArrival.class)));
     }
     public void startNewGameWarningDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
         builder.setTitle(R.string.new_game_warning_dialog_title)
                 .setMessage("If you start a new game, your previous progress will be " +
                         "erased!\n\nAre you sure you want to start a new game?");
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        builder.show();
     }
 
 }

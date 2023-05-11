@@ -68,6 +68,11 @@
     <item name="commodity_onion">Onion</item>
     <item name="commodity_orange">Orange</item>
     </string-array>
+    <string-array name="difficultyList">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
     <string-array name="Credits">
         <item name="icons8">icons8.com</item>
         <item name="Number generator">https://www.rangen.co.uk/misc/numbergen.php</item>
