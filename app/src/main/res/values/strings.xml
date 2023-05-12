@@ -16,6 +16,40 @@
         <item name="city_AmethystCity">Amethyst City</item>
         <item name="city_Agatia">Agatia</item>
     </string-array>
+    <string-array name="city_names_for_commodity">
+        <item name="city_Rubya">Rubya</item>
+        <item name="city_Tourmalina">Tourmalina</item>
+        <item name="city_Sapphira">Sapphira</item>
+        <item name="city_Emeraldis">Emeraldis</item>
+        <item name="city_Diamondaria">Diamondaria</item>
+        <item name="city_JadeEmpire">Jade Empire</item>
+        <item name="city_OnyxCoast">Onyx Coast</item>
+        <item name="city_Opalancy">Opalancy</item>
+        <item name="city_AmethystCity">Amethyst City</item>
+        <item name="city_Agatia">Agatia</item>
+        <item name="city_Rubya">Rubya</item>
+        <item name="city_Tourmalina">Tourmalina</item>
+        <item name="city_Sapphira">Sapphira</item>
+        <item name="city_Emeraldis">Emeraldis</item>
+        <item name="city_Diamondaria">Diamondaria</item>
+        <item name="city_JadeEmpire">Jade Empire</item>
+        <item name="city_OnyxCoast">Onyx Coast</item>
+        <item name="city_Opalancy">Opalancy</item>
+        <item name="city_AmethystCity">Amethyst City</item>
+        <item name="city_Agatia">Agatia</item>
+        <item name="city_AmethystCity">Amethyst City</item>
+        <item name="city_Agatia">Agatia</item>
+        <item name="city_Rubya">Rubya</item>
+        <item name="city_Tourmalina">Tourmalina</item>
+        <item name="city_Sapphira">Sapphira</item>
+        <item name="city_Emeraldis">Emeraldis</item>
+        <item name="city_Diamondaria">Diamondaria</item>
+        <item name="city_JadeEmpire">Jade Empire</item>
+        <item name="city_OnyxCoast">Onyx Coast</item>
+        <item name="city_Opalancy">Opalancy</item>
+        <item name="city_AmethystCity">Amethyst City</item>
+        <item name="city_Agatia">Agatia</item>
+    </string-array>
     <!--Merchant Names-->
     <string-array name="merchant_names_list">
     <item name="merchant_Kareem">Kareem Roman</item>
@@ -73,18 +107,6 @@
         <item>Medium</item>
         <item>Hard</item>
     </string-array>
-    <string-array name="nums">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
     <string-array name="Credits">
         <item name="icons8">icons8.com</item>
         <item name="Number generator">https://www.rangen.co.uk/misc/numbergen.php</item>
@@ -94,9 +116,12 @@
     <string name="goalPt_2">and retire into the lap of luxury!</string>
     <string name="lossCondition">Be careful! If you spend all your money, you will lose the game!</string>
     <string name="goodLuck">Good luck!</string>
-    <!--City Text -->
-    <string name="sapphiraWelcome">Welcome to Rubya!</string>
-    <string name="sapphiraText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!
-</string>
+    <!--City Texts -->
+    <string name="sapphiraWelcome">Welcome to Sapphira!</string>
+    <string name="sapphiraText">Sapphira lies beside the deepest known lake.\nThe water is cool and sweet, even during the hottest summer days.\n\nFruits and vegetables that need lots of water do especially well here!</string>
+    <string name="rubyaWelcome">Welcome to Rubya!</string>
+    <string name="rubyaText">Rubya is a beautiful city tucked into a valley at the base of a mountain.\nThe soil is rich and perfect for delicate fruits.\n\nRubya is blessed to have 2 merchants to trade with!</string>
+
+    <!--Game Over Texts-->
     <string name="you_won">You did it! You earned enough Gold to retire in luxury!\n\nYour name will be in the Merchant Guild’s annals as one of the Successful Ones, and you will be recognized as a symbol of hope to upcoming Merchants!</string>
 </resources>
