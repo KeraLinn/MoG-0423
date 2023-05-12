@@ -22,6 +22,8 @@ public class startNewGame extends AppCompatActivity {
 
         Merchant merchant = new Merchant("","","",0);
         merchant.getAllMerchants();
+        Commodity commodity = new Commodity("","",0,0);
+        commodity.getAllCommodities();
 
         Button continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener((View v) -> startActivity(new Intent(startNewGame.this,

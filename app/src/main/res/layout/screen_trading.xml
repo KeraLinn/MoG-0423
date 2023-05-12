@@ -224,4 +224,12 @@
         app:layout_constraintStart_toEndOf="@+id/merchantAvatar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="191dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/playTable"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
