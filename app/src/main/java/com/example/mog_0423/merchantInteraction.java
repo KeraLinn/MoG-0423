@@ -32,10 +32,6 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
         Spinner numberSpinner = findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.commodity_names_list
                 , android.R.layout.simple_spinner_item);
-        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,myNumArray,
-                android.R.layout.simple_spinner_item);*/
-        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.difficultyList, android.R.layout.simple_spinner_item);*/
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         numberSpinner.setAdapter(adapter);

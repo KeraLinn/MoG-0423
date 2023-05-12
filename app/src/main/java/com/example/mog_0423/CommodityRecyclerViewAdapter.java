@@ -11,8 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class CommodityRecyclerViewAdapter  extends RecyclerView.Adapter<CommodityRecyclerViewAdapter.MyViewHolder> {
+class CommodityRecyclerViewAdapter extends RecyclerView.Adapter<CommodityRecyclerViewAdapter.MyViewHolder> {
     Context context;
     ArrayList<Commodity> commodityArrayList;
 
@@ -21,11 +22,12 @@ public class CommodityRecyclerViewAdapter  extends RecyclerView.Adapter<Commodit
         this.commodityArrayList = commodityArrayList;
     }
 
+
     @NonNull
     @Override
     public CommodityRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.commodity_recyclerview, parent, false);
+        View view = layoutInflater.inflate(R.layout.commodity_row, parent, false);
         return new CommodityRecyclerViewAdapter.MyViewHolder(view);
     }
 
@@ -33,7 +35,7 @@ public class CommodityRecyclerViewAdapter  extends RecyclerView.Adapter<Commodit
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.name.setText(commodityArrayList.get(position).getCommodityName());
         holder.location.setText(commodityArrayList.get(position).getCommodityLocation());
-        holder.price.setText(commodityArrayList.get(position).getCommodityPrice());
+        holder.price.setText(String.valueOf(commodityArrayList.get(position).getCommodityPrice()));
         holder.imageView.setImageResource(commodityArrayList.get(position).getCommodityImage());
     }
 

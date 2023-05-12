@@ -1,5 +1,5 @@
 package com.example.mog_0423;
-
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,8 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class CommodityRecyclerView extends AppCompatActivity {
+public class CommodityRecyclerViewDataClass extends AppCompatActivity {
+
+    Commodity commodity = new Commodity("","",0,0);
+
     ArrayList<Commodity> commodityList = new ArrayList<>();
     int[] commodityImages = {R.drawable.icons8_apples_plate_100,R.drawable.icons8_apricot_100,
             R.drawable.icons8_artichoke_100,R.drawable.icons8_asparagus_100,
@@ -33,29 +37,46 @@ public class CommodityRecyclerView extends AppCompatActivity {
     //            R.drawable.icons8_squash_100,R.drawable.icons8_strawberry_100,
     //            R.drawable.icons8_tomato_100,R.drawable.icons8_white_beans_100,R.drawable.icons8_zucchini_100;
 
-    protected void OnCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.commodity_recyclerview);
 
         RecyclerView recyclerView = findViewById(R.id.commodityRecyclerView);
 
         setUpCommodityList();
+        //Collection<Commodity> commodities = new ArrayList<>(commodity.getAllCommodities());
+        //commodityList.addAll(commodity.getAllCommodities());
 
         CommodityRecyclerViewAdapter adapter = new CommodityRecyclerViewAdapter(this,
                 commodityList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
     private void setUpCommodityList() {
-        String[] commodityListNames = getResources().getStringArray(R.array.commodity_names_list);
+
+        //String[] commodityListNames =
+                //getResources().getStringArray(R.array.commodity_names_list);
         String[] commodityLocationNames = getResources().getStringArray(R.array.city_names_list);
-        int[] priceArray = {25, 12, 17, 27, 29, 8, 16, 13, 27, 21, 15, 26, 15, 9, 10, 27, 18, 19,
-                15, 28, 11, 29, 10, 12, 21, 29, 30, 29, 14, 27, 8, 11};
-        for (int i = 0; i < commodityListNames.length; i++){
-            commodityList.add(new Commodity(commodityListNames[i],
-                    commodityLocationNames[i], priceArray[i],commodityImages[i]));
+        int[] priceArray = {25, 12, 17, 27, 29, 8, 16, 13, 27, 21};//, 15, 26, 15, 9, 10, 27, 18,
+        //19, 15, 28, 11, 29, 10, 12, 21, 29, 30, 29, 14, 27, 8, 11};*/
+        String[] myString = {"Apples","Apricots","Asparagus","Banana","Blueberries","Bok Choy",
+                "Broccoli","Cabbage","Carrot","Cashew Nuts"};
+        for (int i = 0; i < myString.length; i++){
+            commodityList.add(new Commodity(myString[i],commodityLocationNames[i],
+                    priceArray[i],commodityImages[i]));
+            /*commodityList.add(i, new Commodity("Apples", "Rubya", 10,
+                    R.drawable.icons8_apples_plate_100));
+            commodityList.add(i, new Commodity("Apricots", "Tourmalina", 8,
+                    R.drawable.icons8_apricot_100));
+            commodityList.add(i, new Commodity("Asparagus", "Agatia", 6,
+                    R.drawable.icons8_asparagus_100));
+            commodityList.add(i, new Commodity("Banana", "Onyx Coast", 4,
+                    R.drawable.icons8_banana_100));
+            commodityList.add(i, new Commodity("Blueberries", "Sapphira", 7,
+                    R.drawable.icons8_blueberry_100));*/
         }
+
+
     }
 
 }

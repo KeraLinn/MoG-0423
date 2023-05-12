@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CommodityRecyclerView">
+        <activity android:name=".CommodityRecyclerViewDataClass">
         </activity>
         <activity android:name=".createNewGame">
         </activity>
