@@ -3,233 +3,129 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TableLayout
-        android:id="@+id/playTable"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="151dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        app:layout_constraintTop_toBottomOf="@+id/playerAvatar">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="265dp">
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_broccoli_100"
-                tools:layout_editor_absoluteX="114dp"
-                tools:layout_editor_absoluteY="265dp" />
-
-            <NumberPicker
-                android:id="@+id/merPick4"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="265dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="365dp">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_mango_100"
-                tools:layout_editor_absoluteX="114dp"
-                tools:layout_editor_absoluteY="365dp" />
-
-            <NumberPicker
-                android:id="@+id/merPick5"
-                android:layout_width="wrap_content"
-                android:layout_height="114dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="479dp">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_peas_100" />
-
-            <NumberPicker
-                android:id="@+id/merPick6"
-                android:layout_width="90dp"
-                android:layout_height="match_parent" />
-
-        </TableRow>
-
-    </TableLayout>
-
-    <ImageView
-        android:id="@+id/merchantAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/merchTable"
-        app:layout_constraintEnd_toStartOf="@+id/divider3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tradingTimeScreenTitle"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/playerAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="118dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="47dp"
-        app:layout_constraintBottom_toTopOf="@+id/playTable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons8_hummingbird_100" />
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tradingTimeScreenTitle"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="168dp"
         android:text="Trade Time!"
-        android:textColor="@color/Onyx"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/merchantAvatar"
-        app:layout_constraintEnd_toStartOf="@+id/playerAvatar"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/completeTradeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="59dp"
-        android:text="Complete Trade"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/merchTable" />
-
-    <TableLayout
-        android:id="@+id/merchTable"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/completeTradeButton"
-        app:layout_constraintEnd_toStartOf="@+id/divider3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/merchantAvatar">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="265dp">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_apricot_100"
-                tools:layout_editor_absoluteX="114dp"
-                tools:layout_editor_absoluteY="265dp" />
-
-            <NumberPicker
-                android:id="@+id/merPick1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="265dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="365dp">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_cherry_100"
-                tools:layout_editor_absoluteX="114dp"
-                tools:layout_editor_absoluteY="365dp" />
-
-            <NumberPicker
-                android:id="@+id/merPick2"
-                android:layout_width="wrap_content"
-                android:layout_height="114dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="479dp">
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/icons8_grapes_100" />
-
-            <NumberPicker
-                android:id="@+id/merPick3"
-                android:layout_width="90dp"
-                android:layout_height="match_parent" />
-
-        </TableRow>
-
-    </TableLayout>
-
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/playerAvatar"
-        app:layout_constraintStart_toEndOf="@+id/merchantAvatar"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="191dp"
-        android:layout_height="78dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/playTable"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="87dp"
+        android:text="Greetings! Here's what I have on offer:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="142dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:chipSpacingHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/appleExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/icons8_apples_plate_100"
+            app:chipIconSize="50dp"
+            app:chipMinHeight="80dp"
+            app:textEndPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/icons8_apricot_100"
+            app:chipIconSize="50dp"
+            app:chipMinHeight="80dp"
+            app:textEndPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/icons8_apricot_100"
+            app:chipIconSize="50dp"
+            app:chipMinHeight="80dp"
+            app:textEndPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/icons8_apricot_100"
+            app:chipIconSize="50dp"
+            app:chipMinHeight="80dp"
+            app:textEndPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/icons8_apricot_100"
+            app:chipIconSize="50dp"
+            app:chipMinHeight="80dp"
+            app:textEndPadding="0dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="291dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

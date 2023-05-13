@@ -8,7 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class cityArrival extends AppCompatActivity {
-
+    //1 merchant: Tourmalina, Sapphira, Diamondaria, Amethyst City, Agatia
+    //2 merchants: Rubya, Emeraldis, Jade Empire, Onyx Coast, Opalancy
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
