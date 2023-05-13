@@ -11,6 +11,9 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,6 +23,10 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
     int playerBuying;
     int playerSelling;
     int[] myNumArray = {1,2,3,4,5,6,7,8,9,10};
+    ChipGroup chipGroup;
+    Chip chippy;
+
+
     Commodity commodity;
     //Commodity[] myCommodityArray = new Commodity[5];
     public ArrayList<Commodity> commodityArrayList = new ArrayList<>();
@@ -29,6 +36,7 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
 
+        setUpChips();
         Spinner numberSpinner = findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.commodity_names_list
                 , android.R.layout.simple_spinner_item);
@@ -36,14 +44,6 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
 
         numberSpinner.setAdapter(adapter);
         numberSpinner.setOnItemSelectedListener(this);
-        NumberPicker merchantPickerItem1 = findViewById(R.id.merPick1);
-
-        NumberPicker merchantPickerItem2 = findViewById(R.id.merPick2);
-        NumberPicker merchantPickerItem3 = findViewById(R.id.merPick3);
-        NumberPicker playerPickerItem1 = findViewById(R.id.merPick4);
-        NumberPicker playerPickerItem2 = findViewById(R.id.merPick5);
-        NumberPicker playerPickerItem3 = findViewById(R.id.merPick6);
-
 
         Button doneButton = findViewById(R.id.completeTradeButton);
         doneButton.setOnClickListener((View v) -> {
@@ -53,6 +53,12 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
                     cityArrival.class));
         });
 
+    }
+
+    private void setUpChips() {
+        //getMerchantStock();
+        chippy.setText(commodity.getCommodityName());
+        //needs to be drawable to set? chippy.setChipIcon(commodity.getCommodityImage());
     }
 
     private void completeTransaction() {
