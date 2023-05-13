@@ -113,6 +113,15 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/commodityQty"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/qtySpinner"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/commodityBuyText"
+                app:layout_constraintTop_toBottomOf="@+id/qtyNumber" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

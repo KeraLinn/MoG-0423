@@ -8,8 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -22,12 +25,13 @@ import java.util.Dictionary;
 public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     int playerBuying;
     int playerSelling;
-    int[] myNumArray = {1,2,3,4,5,6,7,8,9,10};
+
     ChipGroup chipGroup;
     Chip chippy;
 
 
     Commodity commodity;
+    SpinnerAdapter spinnerAdapter;
     //Commodity[] myCommodityArray = new Commodity[5];
     public ArrayList<Commodity> commodityArrayList = new ArrayList<>();
 
@@ -37,21 +41,29 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.screen_trading);
 
         setUpChips();
-        Spinner numberSpinner = findViewById(R.id.spinner2);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.commodity_names_list
+
+        RecyclerView recyclerView = findViewById(R.id.tradingRecyclerView);
+        merchantStockRecyclerViewAdapter stockAdapter = new merchantStockRecyclerViewAdapter(this,
+                commodityArrayList,spinnerAdapter);
+        recyclerView.setAdapter(stockAdapter);;
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        /*Spinner numberSpinner = findViewById(R.id.qtySpinner);
+        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this,
+                R.array.commodity_names_list
                 , android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        numberSpinner.setAdapter(adapter);
+        numberSpinner.setAdapter(spinnerAdapter);
         numberSpinner.setOnItemSelectedListener(this);
-
-        Button doneButton = findViewById(R.id.completeTradeButton);
+*/
+        /*Button doneButton = findViewById(R.id.completeTradeButton);
         doneButton.setOnClickListener((View v) -> {
             completeTransaction();
 
             startActivity(new Intent(merchantInteraction.this,
                     cityArrival.class));
-        });
+        });*/
 
     }
 

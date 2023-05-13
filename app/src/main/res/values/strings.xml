@@ -68,7 +68,7 @@
         <item name="merchant_Zuzanna">Zuzanna Estel</item>
         <item name="merchant_Rowan">Rowan Fischer</item>
     </string-array>
-    <!--Commodity/Item Names (30 of 52 images)-->
+    <!--Commodity/Item Names (51 total)-->
     <string-array name="commodity_names_list">
         <item name="commodity_apple">Apple Plate</item>
         <item name="commodity_apricot">Apricot</item>
