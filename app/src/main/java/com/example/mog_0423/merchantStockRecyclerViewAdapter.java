@@ -20,7 +20,6 @@ import java.util.Arrays;
 public class merchantStockRecyclerViewAdapter extends RecyclerView.Adapter<merchantStockRecyclerViewAdapter.MyViewHolder> {
     Context context;
     ArrayList<Commodity> merchantStockArrayList;
-
     SpinnerAdapter spinnerAdapter;
 
     public merchantStockRecyclerViewAdapter(Context context,

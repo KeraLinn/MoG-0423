@@ -23,6 +23,7 @@ import java.util.Collection;
 import java.util.Dictionary;
 
 public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    //TODO: need to implement this class for a selling activity as well
     int playerBuying;
     int playerSelling;
 
@@ -68,6 +69,7 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
     }
 
     private void setUpChips() {
+        //TODO: finish setting up method after connecting RecyclerView portion to the screen_trading
         //getMerchantStock();
         chippy.setText(commodity.getCommodityName());
         //needs to be drawable to set? chippy.setChipIcon(commodity.getCommodityImage());

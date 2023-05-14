@@ -9,16 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_home);
-
-
 
         Button newGameButton = findViewById(R.id.newGameButton);
         newGameButton.setOnClickListener((v -> startNewGameWarningDialog()));

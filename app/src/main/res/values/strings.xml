@@ -70,7 +70,7 @@
     </string-array>
     <!--Commodity/Item Names (51 total)-->
     <string-array name="commodity_names_list">
-        <item name="commodity_apple">Apple Plate</item>
+        <item name="commodity_apple">Apples</item>
         <item name="commodity_apricot">Apricot</item>
         <item name="commodity_artichoke">Artichoke</item>
         <item name="commodity_asparagus">Asparagus</item>
@@ -81,22 +81,22 @@
         <item name="commodity_bokchoy">Bok Choy</item>
         <item name="commodity_broccoli">Broccoli</item>
         <item name="commodity_cabbage">Cabbage</item>
-        <item name="commodity_carrot">Carrot</item>
-        <item name="commodity_cashew">Cashew</item>
+        <item name="commodity_carrot">Carrots</item>
+        <item name="commodity_cashew">Cashews</item>
         <item name="commodity_cauliflower">Cauliflower</item>
         <item name="commodity_celery">Celery</item>
         <item name="commodity_cherry">Cherry</item>
         <item name="commodity_coconut">Coconut</item>
         <item name="commodity_corn">Corn</item>
-        <item name="commodity_dragonFruit">Dragon Fruit</item>
+        <item name="commodity_dragonFruit">Dragonfruit</item>
         <item name="commodity_eggplant">Eggplant</item>
-        <item name="commodity_flax">Flax Seeds</item>
+        <item name="commodity_flax">Flax</item>
         <item name="commodity_garlic">Garlic</item>
         <item name="commodity_grapes">Grapes</item>
-        <item name="commodity_hazelnut">Hazelnut</item>
+        <item name="commodity_hazelnut">Hazelnuts</item>
         <item name="commodity_leek">Leek</item>
-        <item name="commodity_lentil">Lentil</item>
-        <item name="commodity_lettuce">Romaine Lettuce</item>
+        <item name="commodity_lentil">Lentils</item>
+        <item name="commodity_lettuce">Lettuce</item>
         <item name="commodity_mango">Mango</item>
         <item name="commodity_mushroom">Mushroom</item>
         <item name="commodity_orange">Oats</item>

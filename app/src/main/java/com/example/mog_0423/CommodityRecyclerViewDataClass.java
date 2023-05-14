@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CommodityRecyclerViewDataClass extends AppCompatActivity {
 
@@ -55,20 +57,21 @@ public class CommodityRecyclerViewDataClass extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
     private void setUpCommodityList() {
-        //commodity.map1.
         String[] commodityListNames =
                 getResources().getStringArray(R.array.commodity_names_list);
-
-        //String[] commodityLocationNames =
-          //      getResources().getStringArray(R.array.city_names_for_commodity);
+        Map<String,String> myMap = commodity.getMapCommodityLocation();
         int[] priceArray = {25, 12, 17, 27, 29, 8, 16, 13, 27, 21, 15, 26, 15, 9, 10, 27, 18,
             19, 15, 28, 11, 29, 10, 12, 21, 29, 30, 29, 14, 27, 8, 11, 29, 10, 12, 21, 29, 30, 29
                 , 14, 19, 15, 28, 11, 29, 10, 12, 21, 29, 30, 16};
         for (int i = 0; i < commodityListNames.length; i++){
-            commodityList.add(new Commodity(commodityListNames[i],commodity.getCommodityLocation(),
+            commodityList.add(new Commodity(commodityListNames[i],
+                    myMap.get(commodityListNames[i]),
                     priceArray[i],commodityImages[i]));
         }
 
+        //TODO: RecyclerView needs some aesthetic work - add space between the rows, adjust the
+        // font. If decided to keep location on recyclerview row, may need to adjust the font size.
+        //TODO: attach the price and coin to the right side of the row so that they line up nicely.
 
     }
 
