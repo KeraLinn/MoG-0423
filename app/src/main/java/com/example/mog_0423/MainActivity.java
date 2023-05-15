@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Map;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,10 +20,15 @@ public class MainActivity extends AppCompatActivity {
         newGameButton.setOnClickListener((v -> startNewGameWarningDialog()));
 
         Button continueGameButton = findViewById(R.id.continueButton);
-        /*continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
-                .this, CommodityRecyclerViewDataClass.class)));*/
         continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
                 .this, merchantInteraction.class)));
+
+        //TODO remove the myButton from screen_home.xml layout and from MainActivity.java. This
+        // is here to demonstrate working code for commodityRecyclerView
+        Button myButton;
+        myButton = findViewById(R.id.buttonRecycler);
+        myButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity.this,
+                CommodityRecyclerViewDataClass.class)));
     }
     public void startNewGameWarningDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

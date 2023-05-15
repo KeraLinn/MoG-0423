@@ -26,19 +26,8 @@ import java.util.Vector;
 
 public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     //TODO: need to implement this class for a selling activity as well
-    int playerBuying;
-    int playerSelling;
-
-    ChipGroup chipGroup;
-   // Chip chippy;
-    Merchant merchant;
-    Vector<Merchant> merchantVector = new Vector<>();
 
     Commodity commodity = new Commodity("","",0,0);
-    //SpinnerAdapter spinnerAdapter;
-    ArrayAdapter<SpinnerAdapter> spinnerAdapter;
-    Map<String,String> commodityMapLocation;
-    Map<String,Integer> commodityMapImages;
     ArrayList<Commodity> commodityArrayList = new ArrayList<>();
     ArrayList<Commodity> cityStockArrayList = commodity.getAmethystCityCommodityArrayList();
 
@@ -57,24 +46,6 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
                 cityStockArrayList);
         recyclerView.setAdapter(stockAdapter);;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        /*Spinner numberSpinner = findViewById(R.id.qtySpinner);
-        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this,
-                R.array.commodity_names_list
-                , android.R.layout.simple_spinner_item);
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        numberSpinner.setAdapter(spinnerAdapter);
-        numberSpinner.setOnItemSelectedListener(this);
-*/
-        /*Button doneButton = findViewById(R.id.completeTradeButton);
-        doneButton.setOnClickListener((View v) -> {
-            completeTransaction();
-
-            startActivity(new Intent(merchantInteraction.this,
-                    cityArrival.class));
-        });*/
-
     }
 
     private void setUpScreenAttachments() {
@@ -88,8 +59,6 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
             chippy.setChipIconResource(cityStockArrayList.get(i).commodityImage);
             commodityArrayList.add(i,cityStockArrayList.get(i));
         }
-
-        //chippy.setChipIconResource(commodityMapImages.get(commodity.getCommodityName()));
 
     }
 

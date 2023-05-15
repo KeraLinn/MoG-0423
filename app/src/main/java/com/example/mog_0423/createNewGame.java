@@ -22,7 +22,7 @@ import java.io.File;
 
 public class createNewGame extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String playerName;
-    int difficultyLevel;
+    Object difficultyLevel;
     int profileImage;
     protected File newFile;
 
@@ -75,7 +75,7 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-       difficultyLevel = (int) parent.getItemAtPosition(position);
+       difficultyLevel = parent.getItemAtPosition(position);
     }
 
     @Override

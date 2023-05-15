@@ -21,7 +21,7 @@ public class startNewGame extends AppCompatActivity {
         setContentView(R.layout.screen_start_game);
 
         Merchant merchant = new Merchant("","","",0);
-        merchant.getAllMerchants();
+        //merchant.getAllMerchants();
         /*Commodity commodity = new Commodity("","",0,0);
         commodity.getAllCommodities();*/
 
