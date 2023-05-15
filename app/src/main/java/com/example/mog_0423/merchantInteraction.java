@@ -21,6 +21,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Dictionary;
+import java.util.Map;
+import java.util.Vector;
 
 public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     //TODO: need to implement this class for a selling activity as well
@@ -28,24 +30,31 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
     int playerSelling;
 
     ChipGroup chipGroup;
-    Chip chippy;
+   // Chip chippy;
+    Merchant merchant;
+    Vector<Merchant> merchantVector = new Vector<>();
 
-
-    Commodity commodity;
-    SpinnerAdapter spinnerAdapter;
-    //Commodity[] myCommodityArray = new Commodity[5];
-    public ArrayList<Commodity> commodityArrayList = new ArrayList<>();
+    Commodity commodity = new Commodity("","",0,0);
+    //SpinnerAdapter spinnerAdapter;
+    ArrayAdapter<SpinnerAdapter> spinnerAdapter;
+    Map<String,String> commodityMapLocation;
+    Map<String,Integer> commodityMapImages;
+    ArrayList<Commodity> commodityArrayList = new ArrayList<>();
+    ArrayList<Commodity> cityStockArrayList = commodity.getAmethystCityCommodityArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
 
-        setUpChips();
+
 
         RecyclerView recyclerView = findViewById(R.id.tradingRecyclerView);
+
+        setUpScreenAttachments();
+
         merchantStockRecyclerViewAdapter stockAdapter = new merchantStockRecyclerViewAdapter(this,
-                commodityArrayList,spinnerAdapter);
+                cityStockArrayList);
         recyclerView.setAdapter(stockAdapter);;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -68,11 +77,20 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
 
     }
 
-    private void setUpChips() {
+    private void setUpScreenAttachments() {
         //TODO: finish setting up method after connecting RecyclerView portion to the screen_trading
         //getMerchantStock();
-        chippy.setText(commodity.getCommodityName());
-        //needs to be drawable to set? chippy.setChipIcon(commodity.getCommodityImage());
+
+
+
+        for (int i = 0; i < 5; i++){
+            Chip chippy = new Chip(this);
+            chippy.setChipIconResource(cityStockArrayList.get(i).commodityImage);
+            commodityArrayList.add(i,cityStockArrayList.get(i));
+        }
+
+        //chippy.setChipIconResource(commodityMapImages.get(commodity.getCommodityName()));
+
     }
 
     private void completeTransaction() {

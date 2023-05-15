@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
         newGameButton.setOnClickListener((v -> startNewGameWarningDialog()));
 
         Button continueGameButton = findViewById(R.id.continueButton);
+        /*continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
+                .this, CommodityRecyclerViewDataClass.class)));*/
         continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
-                .this, CommodityRecyclerViewDataClass.class)));
+                .this, merchantInteraction.class)));
     }
     public void startNewGameWarningDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

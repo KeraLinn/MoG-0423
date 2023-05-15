@@ -28,10 +28,10 @@
         android:text="Greetings! Here's what I have on offer:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/merchantAvatar" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/merchantAvatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"

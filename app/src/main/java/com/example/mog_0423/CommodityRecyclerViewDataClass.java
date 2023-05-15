@@ -68,7 +68,10 @@ public class CommodityRecyclerViewDataClass extends AppCompatActivity {
                     myMap.get(commodityListNames[i]),
                     priceArray[i],commodityImages[i]));
         }
-
+        /*for(int i = 0; i < 5; i++){
+            commodity = commodity.agatiaCommodityVector.get(i);
+            commodityList.add(i,commodity.agatiaCommodityVector.get(i));
+        }*/
         //TODO: RecyclerView needs some aesthetic work - add space between the rows, adjust the
         // font. If decided to keep location on recyclerview row, may need to adjust the font size.
         //TODO: attach the price and coin to the right side of the row so that they line up nicely.
