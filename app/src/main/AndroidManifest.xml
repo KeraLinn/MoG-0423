@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoG0423"
         tools:targetApi="31">
+        <activity android:name=".customNavDrawer" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

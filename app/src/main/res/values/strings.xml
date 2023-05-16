@@ -160,4 +160,6 @@
     <string name="agatiaText">Agatia embodies the spirit of autumn the entire year. The residents rely on canning, drying, and preserving their favorite crops to enjoy them even when they are out-of-season.</string>
     <!--Game Over Texts-->
     <string name="you_won">You did it! You earned enough Gold to retire in luxury!\n\nYour name will be in the Merchant Guild’s annals as one of the Successful Ones, and you will be recognized as a symbol of hope to upcoming Merchants!</string>
+    <string name="menu_drawer_open">Drawer Open</string>
+    <string name="menu_drawer_close">Drawer Close</string>
 </resources>

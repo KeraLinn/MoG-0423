@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class cityArrival extends AppCompatActivity {
+public class cityArrival extends customNavDrawer {
     //1 merchant: Tourmalina, Sapphira, Diamondaria, Amethyst City, Agatia
     //2 merchants: Rubya, Emeraldis, Jade Empire, Onyx Coast, Opalancy
 

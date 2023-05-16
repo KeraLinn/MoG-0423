@@ -12,15 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 
-public class createNewGame extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class createNewGame extends customNavDrawer implements AdapterView.OnItemSelectedListener {
     String playerName;
     Object difficultyLevel;
     int profileImage;

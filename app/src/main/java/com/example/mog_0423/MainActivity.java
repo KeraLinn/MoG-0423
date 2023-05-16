@@ -1,15 +1,14 @@
 package com.example.mog_0423;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AlertDialog;
+
+public class MainActivity extends customNavDrawer {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

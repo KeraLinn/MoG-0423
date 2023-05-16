@@ -1,30 +1,17 @@
 package com.example.mog_0423;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.NumberPicker;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Dictionary;
-import java.util.Map;
-import java.util.Vector;
 
-public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class merchantInteraction extends customNavDrawer implements AdapterView.OnItemSelectedListener {
     //TODO: need to implement this class for a selling activity as well
 
     Commodity commodity = new Commodity("","",0,0);
