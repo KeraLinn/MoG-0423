@@ -29,7 +29,8 @@
         <activity android:name=".createNewGame" />
         <activity android:name=".startNewGame" />
         <activity android:name=".merchantInteraction" />
-        <activity android:name=".cityArrival" />
+        <activity android:name=".cityArrival1Merchant" />
+        <activity android:name=".cityArrival2Merchants" />
 
         <meta-data
             android:name="preloaded_fonts"

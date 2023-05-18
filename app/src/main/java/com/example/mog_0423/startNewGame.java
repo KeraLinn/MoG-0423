@@ -24,7 +24,7 @@ public class startNewGame extends AppCompatActivity {
 
         Button continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener((View v) -> startActivity(new Intent(startNewGame.this,
-                cityArrival.class
+                cityArrival1Merchant.class
                 )));
 
     }

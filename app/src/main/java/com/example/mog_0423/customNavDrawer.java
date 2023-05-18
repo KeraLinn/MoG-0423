@@ -85,7 +85,7 @@ public class customNavDrawer extends AppCompatActivity implements NavigationView
                     overridePendingTransition(0,0);
                     break;
                 case 'A':
-                    startActivity(new Intent(this, cityArrival.class));
+                    startActivity(new Intent(this, cityArrival1Merchant.class));
                     overridePendingTransition(0,0);
                     break;
                 case 'G':
