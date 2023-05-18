@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class cityArrival1Merchant extends AppCompatActivity {
 
     //1 merchant: Tourmalina, Sapphira, Diamondaria, Amethyst City, Agatia
-    //public String cityChoiceString = ci
+
     TextView welcomeText;
     TextView cityText;
     ImageView merchantImage;

@@ -3,27 +3,26 @@ package com.example.mog_0423;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.chip.Chip;
 
 import java.util.ArrayList;
 
 public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    //MerchantInteractionBinding merchantInteractionBinding;
-   // ViewDataBinding viewDataBinding = new Activity
-        ViewDataBinding binding;
-
     //TODO: need to implement this class for a selling activity as well
-
+    ImageView merchantAvatar;
+    TextView totalToPurchase;
+    TextView playerGold;
+    int totalPurchase;
+    int priceXqty;
     Commodity commodity = new Commodity("","",0,0);
-    ArrayList<Commodity> commodityArrayList = new ArrayList<>();
     ArrayList<Commodity> cityStockArrayList = commodity.getAmethystCityCommodityArrayList();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,19 +54,20 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
                 cityStockArrayList);
         recyclerView.setAdapter(stockAdapter);;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+    }
+
+    private void PurchasingAdd() {
+
     }
 
     private void setUpScreenAttachments() {
         //TODO: finish setting up method after connecting RecyclerView portion to the screen_trading
         //getMerchantStock();
-
-
-
-        for (int i = 0; i < 5; i++){
-            Chip chippy = new Chip(this);
-            chippy.setChipIconResource(cityStockArrayList.get(i).commodityImage);
-            commodityArrayList.add(i,cityStockArrayList.get(i));
-        }
+        merchantAvatar = findViewById(R.id.merchantAvatar);
+        merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
+        totalToPurchase = findViewById(R.id.textviewTotal);
+        playerGold = findViewById(R.id.textviewTotalYourGold);
 
     }
 
@@ -81,8 +81,16 @@ public class merchantInteraction extends AppCompatActivity implements AdapterVie
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        parent.getItemAtPosition(position);
+        int qty = (int) parent.getSelectedItem();
+
+        /*priceXqty = selectedItem.commodityPrice * qty;
+        totalPurchase += priceXqty;*/
+        totalToPurchase.setText(totalPurchase);
+        totalToPurchase.refreshDrawableState();
+        //parent.getItemAtPosition(position);
     }
+
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

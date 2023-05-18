@@ -47,8 +47,11 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
             case 0:
                 //rubya
             case 4:
+                //diamondaria
             case 6:
+                //onyx
             case 7:
+                //opalancy
             case 8:
                 /*cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
                         cityArrival1Merchant.class)));*/
@@ -64,15 +67,18 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
                             cityArrival1Merchant.class));
                 });
             case 3:
-
+            //emeraldis
 
 
             case 5:
+                //jade
             case 9:
+                //amethyst
             case 10:
-                cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
+                //agatia
+                /*cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
                         cityArrival2Merchants.class)));
-                break;
+                break;*/
         }
     }
 

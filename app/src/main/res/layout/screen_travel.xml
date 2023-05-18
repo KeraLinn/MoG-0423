@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/pexels_codioful__formerly_gradienta__7130537">
 
     <TextView
         android:id="@+id/Prompt"
@@ -22,8 +23,8 @@
 
     <Spinner
         android:id="@+id/citySpinner"
-        android:layout_width="325dp"
-        android:layout_height="67dp"
+        android:layout_width="222dp"
+        android:layout_height="104dp"
         android:layout_marginTop="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

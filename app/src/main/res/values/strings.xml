@@ -3,6 +3,19 @@
     <string name="gameTitle">A Merchant of Geminaria</string>
     <string name="new_game_warning_dialog_title">Wait!</string>
     <string name="choose_city_prompt">Choose the location you\'d like to visit:</string>
+    <string-array name="numberqty">
+        <item name="num0">0</item>
+        <item name="num1">1</item>
+        <item name="num2">2</item>
+        <item name="num3">3</item>
+        <item name="num4">4</item>
+        <item name="num5">5</item>
+        <item name="num6">6</item>
+        <item name="num7">7</item>
+        <item name="num8">8</item>
+        <item name="num9">9</item>
+        <item name="num10">10</item>
+    </string-array>
     <!--City Names-->
     <string-array name="city_names_list">
         <item name="city_Rubya">Rubya</item>

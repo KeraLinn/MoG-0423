@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,8 +38,9 @@ public class merchantStockRecyclerViewAdapter extends RecyclerView.Adapter<merch
         holder.name.setText(merchantStockArrayList.get(position).getCommodityName());
         holder.qtyAvailable.setText("10");
         holder.price.setText(String.valueOf(merchantStockArrayList.get(position).getCommodityPrice()));
-        holder.selectionSpinner.setAdapter(new ArrayAdapter<>(context,
-                android.R.layout.simple_spinner_dropdown_item));
+        holder.selectionSpinner.setAdapter(ArrayAdapter.createFromResource(context,
+                R.array.numberqty,
+                android.R.layout.simple_spinner_item));
     }
 
     @Override
