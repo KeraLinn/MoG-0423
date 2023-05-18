@@ -6,19 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".customNavDrawer"
     tools:openDrawer="start"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <include layout="@layout/nav_content_layout"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent" />
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
-        android:id="@+id/nav_view"
+
         app:headerLayout="@layout/nav_drawer_header"
         app:menu="@menu/custom_menu"/>
+    <!-- android:theme="@style/Theme.MoG0423"-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

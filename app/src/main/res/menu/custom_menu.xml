@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/amethystCity"
+        android:title="Travel to a different city"
+        android:icon="@drawable/icons8_dragon_fruit_100"
+        android:alphabeticShortcut="A"
+        app:showAsAction="withText"/>
+            <item
+                android:id="@+id/opalancy"
+                android:title="Opalancy"
+                android:alphabeticShortcut="O"
+                app:showAsAction="withText"/>
+            <item
+                android:id="@+id/agatia"
+                android:title="Agatia"
+                android:alphabeticShortcut="G"
+                app:showAsAction="withText"/>
+
+
+        <item
+            android:id="@+id/homescreen"
+            android:title="Exit"
+            android:icon="@drawable/icons8_coins_64_noshadow"
+            android:alphabeticShortcut="E"
+            app:showAsAction="withText"/>
+    <item
+        android:id="@+id/commodityDB"
+        android:title="List of Commodities"
+        android:icon="@drawable/basket_of_carrots"
+        android:alphabeticShortcut="C"
+        app:showAsAction="withText"/>
+</group>
+</menu>

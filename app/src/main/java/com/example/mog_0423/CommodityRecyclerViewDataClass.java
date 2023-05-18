@@ -2,13 +2,14 @@ package com.example.mog_0423;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class CommodityRecyclerViewDataClass extends customNavDrawer {
+public class CommodityRecyclerViewDataClass extends AppCompatActivity {
 
     Commodity commodity = new Commodity("","",0,0);
 

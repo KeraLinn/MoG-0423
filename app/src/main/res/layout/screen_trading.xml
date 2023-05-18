@@ -1,133 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".merchantInteraction">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="169dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="168dp"
-        android:text="Trade Time!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="87dp"
-        android:text="Greetings! Here's what I have on offer:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/merchantAvatar" />
-
-    <ImageView
-        android:id="@+id/merchantAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="142dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:srcCompat="@tools:sample/avatars[0]" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        app:chipSpacingHorizontal="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        android:layout_height="match_parent"
+        tools:context=".merchantInteraction">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/appleExample"
+        <TextView
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/icons8_apples_plate_100"
-            app:chipIconSize="50dp"
-            app:chipMinHeight="80dp"
-            app:textEndPadding="0dp" />
+            android:layout_marginStart="169dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="168dp"
+            android:text="Trade Time!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
+        <TextView
+            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/icons8_apricot_100"
-            app:chipIconSize="50dp"
-            app:chipMinHeight="80dp"
-            app:textEndPadding="0dp" />
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="87dp"
+            android:text="Greetings! Here's what I have on offer:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merchantAvatar" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
+        <ImageView
+            android:id="@+id/merchantAvatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/icons8_apricot_100"
-            app:chipIconSize="50dp"
-            app:chipMinHeight="80dp"
-            app:textEndPadding="0dp" />
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="142dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:srcCompat="@tools:sample/avatars[0]" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip4"
-            android:layout_width="wrap_content"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/icons8_apricot_100"
-            app:chipIconSize="50dp"
-            app:chipMinHeight="80dp"
-            app:textEndPadding="0dp" />
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:chipSpacingHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/icons8_apricot_100"
-            app:chipIconSize="50dp"
-            app:chipMinHeight="80dp"
-            app:textEndPadding="0dp" />
-    </com.google.android.material.chip.ChipGroup>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/appleExample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@android:color/transparent"
+                app:chipIcon="@drawable/icons8_apples_plate_100"
+                app:chipIconSize="50dp"
+                app:chipMinHeight="80dp"
+                app:textEndPadding="0dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tradingRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="291dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@android:color/transparent"
+                app:chipIcon="@drawable/icons8_apricot_100"
+                app:chipIconSize="50dp"
+                app:chipMinHeight="80dp"
+                app:textEndPadding="0dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@android:color/transparent"
+                app:chipIcon="@drawable/icons8_apricot_100"
+                app:chipIconSize="50dp"
+                app:chipMinHeight="80dp"
+                app:textEndPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@android:color/transparent"
+                app:chipIcon="@drawable/icons8_apricot_100"
+                app:chipIconSize="50dp"
+                app:chipMinHeight="80dp"
+                app:textEndPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@android:color/transparent"
+                app:chipIcon="@drawable/icons8_apricot_100"
+                app:chipIconSize="50dp"
+                app:chipMinHeight="80dp"
+                app:textEndPadding="0dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tradingRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="291dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

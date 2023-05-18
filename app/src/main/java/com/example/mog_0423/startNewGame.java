@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class startNewGame extends customNavDrawer {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class startNewGame extends AppCompatActivity {
 
 
 

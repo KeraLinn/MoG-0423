@@ -1,7 +1,6 @@
 package com.example.mog_0423;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,28 +22,31 @@ public class customNavDrawer extends AppCompatActivity implements NavigationView
 
     DrawerLayout drawerLayout;
 
-
     @Override
-    public void setContentView(View view){
+    public void setContentView(View view) {
         drawerLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.nav_custom_drawer, (ViewGroup) view
                 ,false);
+        //drawerLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.nav_custom_drawer,
+                //null);
         FrameLayout container = drawerLayout.findViewById(R.id.activityContainer);
         container.addView(view);
         super.setContentView(drawerLayout);
 
-        Toolbar toolbar = drawerLayout.findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.nav_view);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Toolbar toolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
+        //toolbar.setNavigationOnClickListener(v -> drawerLayout.open());
+
+        //toolbar.isShown();
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         NavigationView navigationView = drawerLayout.findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setEnabled(true);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_drawer_open, R.string.menu_drawer_close);
-
-        toolbar.setNavigationOnClickListener(view1 -> drawerLayout.openDrawer(GravityCompat.START));
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,
+                toolbar, R.string.menu_drawer_open, R.string.menu_drawer_close);
+        toolbar.setNavigationOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -69,24 +71,27 @@ public class customNavDrawer extends AppCompatActivity implements NavigationView
         }*/
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         drawerLayout.closeDrawer(GravityCompat.START);
 
-        switch(item.getItemId()){
-            case R.id.commodityDB:
-                startActivity(new Intent(this,CommodityRecyclerViewDataClass.class));
-                overridePendingTransition(0,0);
-                break;
-            case R.id.homescreen:
-                startActivity(new Intent(this,MainActivity.class));
-                overridePendingTransition(0,0);
-                break;
-            /*case R.id.commodityRecyclerView:
-                startActivity(new Intent(this,CommodityRecyclerViewDataClass.class));
-                overridePendingTransition(0,0);
-                break;*/
+            switch (item.getAlphabeticShortcut()){
+                case 'E':
+                    startActivity(new Intent(this, MainActivity.class));
+                    overridePendingTransition(0,0);
+                    break;
+                case 'C':
+                    startActivity(new Intent(this, CommodityRecyclerViewDataClass.class));
+                    overridePendingTransition(0,0);
+                    break;
+                case 'A':
+                    startActivity(new Intent(this, cityArrival.class));
+                    overridePendingTransition(0,0);
+                    break;
+                case 'G':
+                    startActivity(new Intent(this, startNewGame.class));
+                    overridePendingTransition(0,0);
+                    break;
         }
         return true;
     }

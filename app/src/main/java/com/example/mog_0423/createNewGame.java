@@ -14,9 +14,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.File;
 
-public class createNewGame extends customNavDrawer implements AdapterView.OnItemSelectedListener {
+public class createNewGame extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String playerName;
     Object difficultyLevel;
     int profileImage;
@@ -82,22 +84,19 @@ public class createNewGame extends customNavDrawer implements AdapterView.OnItem
     public void onRadioButtonClicked(View v) {
         //boolean checked = ((RadioButton) v).isChecked();
         //int checkedId = v.getId();
-        switch (v.getId()) {
-            case radioButtonB:
-                profileImage = radioButtonB;
-                break;
-/*            case R.id.radioGroup1:
+        int id = v.getId();
+        if (id == radioButtonB) {
+            profileImage = radioButtonB;
+                /*            case R.id.radioGroup1:
                 switch(checkedId) {*/
                     /*case radioButtonB:
                         profileImage = radioButtonB;
                         break;*/
-            case radioButtonC:
-                profileImage = radioButtonC;
-                break;
-            case radioButtonE:
-                profileImage = radioButtonE;
-                break;
-/*                }
+        } else if (id == radioButtonC) {
+            profileImage = radioButtonC;
+        } else if (id == radioButtonE) {
+            profileImage = radioButtonE;
+                /*                }
                 break;*/
 /*            case R.id.radioGroup2:
                 switch(checkedId){*/

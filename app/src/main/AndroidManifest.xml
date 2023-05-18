@@ -7,11 +7,15 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/gameTitle"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoG0423"
         tools:targetApi="31">
-        <activity android:name=".customNavDrawer" />
+        <activity
+            android:name=".cityTravel"/>
+        <!--<activity
+            android:name=".customNavDrawer"
+            android:exported="true"></activity>-->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,16 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CommodityRecyclerViewDataClass">
-        </activity>
-        <activity android:name=".createNewGame">
-        </activity>
-        <activity android:name=".startNewGame">
-        </activity>
-        <activity android:name=".merchantInteraction">
-        </activity>
-        <activity android:name=".cityArrival">
-        </activity>
+        <activity android:name=".CommodityRecyclerViewDataClass" />
+        <activity android:name=".createNewGame" />
+        <activity android:name=".startNewGame" />
+        <activity android:name=".merchantInteraction" />
+        <activity android:name=".cityArrival" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

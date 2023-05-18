@@ -10,15 +10,27 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <!--<com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/gameTitle"
+            app:navigationIcon="@drawable/baseline_menu_24"
+            style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+            android:background="@android:color/transparent"
+            android:elevation="0dp" />-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
             android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
 
-            app:titleTextColor="@color/RoseRed" />
-        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+            app:titleTextColor="@color/RoseRed"/>
 
+
+<!--&lt;!&ndash;android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"&ndash;&gt;&ndash;&gt;-->
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout

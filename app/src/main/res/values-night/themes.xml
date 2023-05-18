@@ -11,6 +11,8 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationIcon">?navigationIcon</item>
+        <item name="android:toolbarStyle">@layout/nav_content_layout</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

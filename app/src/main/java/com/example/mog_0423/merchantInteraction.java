@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,7 +13,12 @@ import com.google.android.material.chip.Chip;
 
 import java.util.ArrayList;
 
-public class merchantInteraction extends customNavDrawer implements AdapterView.OnItemSelectedListener {
+public class merchantInteraction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    //MerchantInteractionBinding merchantInteractionBinding;
+   // ViewDataBinding viewDataBinding = new Activity
+        ViewDataBinding binding;
+
     //TODO: need to implement this class for a selling activity as well
 
     Commodity commodity = new Commodity("","",0,0);
@@ -22,6 +29,21 @@ public class merchantInteraction extends customNavDrawer implements AdapterView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
+
+
+
+
+        /*merchantInteractionBinding = androidx.databinding.DataBinderMapperImpl.inflate(getLayoutInflater());
+        setContentView(merchantInteractionBinding.getRoot());*/
+        /*activityMerchantInteractionBinding =
+                activityMerchantInteractionBinding.inflate(getLayoutInflater());
+        setContentView(activityMerchantInteractionBinding.getRoot());
+        allocateActivityTitle("Trade Time!");*/
+        /*activityBinding = DataBindingUtil.inflate(getLayoutInflater());
+        setContentView(activityBinding.getRoot());
+        allocateActivityTitle("Trade Time!");*/
+
+
 
 
 
@@ -66,4 +88,5 @@ public class merchantInteraction extends customNavDrawer implements AdapterView.
     public void onNothingSelected(AdapterView<?> parent) {
         parent.getItemIdAtPosition(0);
     }
+
 }
