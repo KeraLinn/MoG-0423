@@ -31,6 +31,7 @@
         <activity android:name=".merchantInteraction" />
         <activity android:name=".cityArrival1Merchant" />
         <activity android:name=".cityArrival2Merchants" />
+        <activity android:name="com.example.mog_0423.playerClass" />
 
         <meta-data
             android:name="preloaded_fonts"

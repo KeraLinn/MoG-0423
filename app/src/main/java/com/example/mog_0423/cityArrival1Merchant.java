@@ -20,7 +20,7 @@ public class cityArrival1Merchant extends AppCompatActivity {
     public void loadSapphira() {
         welcomeText.setText(R.string.sapphiraWelcome);
         cityText.setText(R.string.sapphiraText);
-        merchantImage.setBackgroundColor(R.color.Xanthous);
+        merchantImage.setBackgroundColor(getColor(R.color.Xanthous));
         merchantImage.setImageResource(R.drawable.icons8_merchant_f);
     }
 

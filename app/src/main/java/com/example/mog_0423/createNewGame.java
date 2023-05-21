@@ -19,9 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.File;
 
 public class createNewGame extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    String playerName;
-    Object difficultyLevel;
+    String userName;
+    int chosenDifficultyLevel;
     int profileImage;
+    int playerGold;
     protected File newFile;
 
 
@@ -42,43 +43,30 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
 
         Button completeButton = findViewById(R.id.startButton);
         completeButton.setOnClickListener((View v) -> {
-            playerName = getPlayerName();
-            newFile = new File(playerName);
+            userName = getUserName();
+            newFile = new File(userName);
+            playerGold = 200;
             startActivity(new Intent(createNewGame.this, startNewGame.class));
         });
     }
 
     @SuppressLint("SetTextI18n")
-    String getPlayerName() {
+    String getUserName() {
         EditText player = findViewById(R.id.editTextTextPersonName2);
         if (player.toString().isEmpty()){
             player.setText("Haven");
         }
         return player.toString();
     }
-    /*int getDifficultyLevel(){
-
-
-        if (mediumCheck.isChecked()){
-            return 2;
-        }
-        else if (hardCheck.isChecked()){
-            return 3;
-        }
-        //if easy or none checked
-        else {
-            easyCheck.setChecked(true);
-            return 1;
-        }*/
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-       difficultyLevel = parent.getItemAtPosition(position);
+       chosenDifficultyLevel = (int) parent.getItemAtPosition(position);
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-       difficultyLevel = (int) parent.getItemIdAtPosition(1);
+       chosenDifficultyLevel = (int) parent.getItemIdAtPosition(1);
     }
     @SuppressLint("NonConstantResourceId")
     public void onRadioButtonClicked(View v) {

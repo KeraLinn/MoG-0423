@@ -10,22 +10,165 @@
         android:layout_height="match_parent"
         tools:context=".merchantInteraction">
 
-        <TextView
-            android:id="@+id/yourGoldLabel"
+        <!--<TextView
+            android:id="@+id/qtyNumber5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="174dp"
             android:fontFamily="@font/alegreya"
-            android:text="Your Gold:"
+            android:text="#"
             android:textColor="@color/Onyx"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textviewTotalYourGold"
+            tools:layout_editor_absoluteY="5dp" />-->
+
+        <ImageView
+            android:id="@+id/commodity_image7"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="228dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tradingRecyclerView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/icons8_carrot_1002" />
+
+        <ImageView
+            android:id="@+id/coins_image7"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="208dp"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/commodityName5"
+            app:srcCompat="@drawable/icons8_coins_64" />
+
+        <TextView
+            android:id="@+id/commodityPrice7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="268dp"
+            android:fontFamily="@font/alegreya"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/coins_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/commodityName7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="228dp"
+            android:fontFamily="@font/alegreya"
+            android:text="name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ImageView
+            android:id="@+id/coins_image6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="104dp"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/commodityName5"
+            app:srcCompat="@drawable/icons8_coins_64" />
+
+        <ImageView
+            android:id="@+id/commodity_image6"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/icons8_carrot_1002" />
+
+        <TextView
+            android:id="@+id/commodityName6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/alegreya"
+            android:text="name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/commodityPrice6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="164dp"
+            android:fontFamily="@font/alegreya"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/coins_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ImageView
+            android:id="@+id/coins_image5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/commodityName5"
+            app:srcCompat="@drawable/icons8_coins_64" />
+
+        <ImageView
+            android:id="@+id/commodity_image5"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/icons8_carrot_1002" />
+
+        <TextView
+            android:id="@+id/commodityPrice5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/alegreya"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/coins_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/commodityName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/alegreya"
+            android:text="name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Onyx"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/commodity_image5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
             android:id="@+id/textviewTotalYourGold"
@@ -41,7 +184,57 @@
             app:layout_constraintBottom_toBottomOf="@+id/yourGoldLabel"
             app:layout_constraintEnd_toStartOf="@+id/totalLabel"
             app:layout_constraintStart_toEndOf="@+id/yourGoldLabel"
-            app:layout_constraintTop_toTopOf="@+id/yourGoldLabel" />
+            app:layout_constraintTop_toTopOf="@+id/yourGoldLabel"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/yourGoldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="112dp"
+            android:fontFamily="@font/alegreya"
+            android:text="Your Gold:"
+            android:textColor="@color/Onyx"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textviewTotalYourGold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/totalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/alegreya"
+            android:text="Total:"
+            android:textColor="@color/Onyx"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textviewTotalYourGold"
+            app:layout_constraintEnd_toStartOf="@+id/textviewTotal"
+            app:layout_constraintStart_toEndOf="@+id/textviewTotalYourGold"
+            app:layout_constraintTop_toTopOf="@+id/textviewTotalYourGold"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textviewTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:fontFamily="@font/alegreya"
+            android:text="0"
+            android:textAlignment="textStart"
+            android:textColor="@color/Onyx"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/totalLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalLabel"
+            app:layout_constraintTop_toTopOf="@+id/totalLabel"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView7"
@@ -87,92 +280,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7"
             tools:srcCompat="@tools:sample/avatars[0]" />
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:visibility="gone"
-            app:chipSpacingHorizontal="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/appleExample"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:chipBackgroundColor="@android:color/transparent"
-                app:chipIcon="@drawable/icons8_apples_plate_100"
-                app:chipIconSize="50dp"
-                app:chipMinHeight="80dp"
-                app:textEndPadding="0dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:chipBackgroundColor="@android:color/transparent"
-                app:chipIcon="@drawable/icons8_apricot_100"
-                app:chipIconSize="50dp"
-                app:chipMinHeight="80dp"
-                app:textEndPadding="0dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:chipBackgroundColor="@android:color/transparent"
-                app:chipIcon="@drawable/icons8_apricot_100"
-                app:chipIconSize="50dp"
-                app:chipMinHeight="80dp"
-                app:textEndPadding="0dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:chipBackgroundColor="@android:color/transparent"
-                app:chipIcon="@drawable/icons8_apricot_100"
-                app:chipIconSize="50dp"
-                app:chipMinHeight="80dp"
-                app:textEndPadding="0dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:chipBackgroundColor="@android:color/transparent"
-                app:chipIcon="@drawable/icons8_apricot_100"
-                app:chipIconSize="50dp"
-                app:chipMinHeight="80dp"
-                app:textEndPadding="0dp" />
-        </com.google.android.material.chip.ChipGroup>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tradingRecyclerView"
             android:layout_width="411dp"
             android:layout_height="0dp"
             android:layout_marginTop="294dp"
             android:layout_marginBottom="33dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/yourGoldLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -191,22 +305,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/totalLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/alegreya"
-            android:text="Total:"
-            android:textColor="@color/Onyx"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textviewTotalYourGold"
-            app:layout_constraintEnd_toStartOf="@+id/textviewTotal"
-            app:layout_constraintStart_toEndOf="@+id/textviewTotalYourGold"
-            app:layout_constraintTop_toTopOf="@+id/textviewTotalYourGold" />
-
-        <TextView
+        <!--<TextView
             android:id="@+id/textviewTotal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -220,7 +319,46 @@
             app:layout_constraintBottom_toBottomOf="@+id/totalLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/totalLabel"
-            app:layout_constraintTop_toTopOf="@+id/totalLabel" />
+            app:layout_constraintTop_toTopOf="@+id/totalLabel" />-->
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="spinner2,spinner3,spinner" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="commodity_image5,coins_image5,commodityPrice5,commodityName5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
