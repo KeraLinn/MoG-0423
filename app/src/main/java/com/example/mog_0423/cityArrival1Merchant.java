@@ -41,7 +41,7 @@ public class cityArrival1Merchant extends AppCompatActivity {
 
 
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1Merchant.this,
-                merchantInteraction.class
+                merchantInteractionUserBuys.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1Merchant.this,
                 cityTravel.class

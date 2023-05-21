@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button continueGameButton = findViewById(R.id.continueButton);
         continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
-                .this, merchantInteraction.class)));
+                .this, merchantInteractionUserBuys.class)));
 
         //TODO remove the myButton from screen_home.xml layout and from MainActivity.java. This
         // is here to demonstrate working code for commodityRecyclerView

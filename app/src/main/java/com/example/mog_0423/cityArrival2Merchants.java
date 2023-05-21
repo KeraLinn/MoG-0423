@@ -22,7 +22,7 @@ public class cityArrival2Merchants extends AppCompatActivity {
 
 
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2Merchants.this,
-                merchantInteraction.class
+                merchantInteractionUserBuys.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2Merchants.this,
                 cityTravel.class

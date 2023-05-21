@@ -66,14 +66,14 @@ class Commodity {
         return opalancyCommodityArrayList;
     }
     public ArrayList<Commodity> getRubyaCommodityArrayList() {
-        rubyaCommodityArrayList.add(new Commodity("Raspberry","Rubya", getCommodityPrice(),
-                R.drawable.icons8_raspberry_100));
+        rubyaCommodityArrayList.add(new Commodity("Blueberries","Rubya",getCommodityPrice(),
+                R.drawable.icons8_blueberry_100));
         rubyaCommodityArrayList.add(new Commodity("Strawberry","Rubya",getCommodityPrice(),
                 R.drawable.icons8_strawberry_100));
         rubyaCommodityArrayList.add(new Commodity("Cherry","Rubya",getCommodityPrice(),
                 R.drawable.icons8_cherry_100));
-        rubyaCommodityArrayList.add(new Commodity("Blueberries","Rubya",getCommodityPrice(),
-                R.drawable.icons8_blueberry_100));
+        rubyaCommodityArrayList.add(new Commodity("Raspberry","Rubya", getCommodityPrice(),
+                R.drawable.icons8_raspberry_100));
         rubyaCommodityArrayList.add(new Commodity("Oats","Rubya",getCommodityPrice(),
                 R.drawable.icons8_rolled_oats_100));
         rubyaCommodityArrayList.add(new Commodity("Asparagus","Rubya",getCommodityPrice(),
