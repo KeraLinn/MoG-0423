@@ -61,11 +61,11 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
             case 1:
                 //tourmalina
             case 2:
-                cityPickButton.setOnClickListener((View v) -> {
+                /*cityPickButton.setOnClickListener((View v) -> {
                     cityArrival1Merchant.loadSapphira();
                     startActivity(new Intent(cityTravel.this,
-                            cityArrival1Merchant.class));
-                });
+                            cityArrival1Merchant.class));*//*
+                });*/
             case 3:
             //emeraldis
 

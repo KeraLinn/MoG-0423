@@ -61,7 +61,7 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-       chosenDifficultyLevel = (int) parent.getItemAtPosition(position);
+       String myString = parent.getItemAtPosition(position).toString();
     }
 
     @Override

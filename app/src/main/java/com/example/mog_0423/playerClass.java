@@ -6,6 +6,11 @@ public class playerClass extends createNewGame {
     String playerName;
     int playerAvatar;
     int difficultyLevel;
+
+    public void setPlayerPurse(int playerPurse) {
+        this.playerPurse = playerPurse;
+    }
+
     int playerPurse;
     File playerFile;
 

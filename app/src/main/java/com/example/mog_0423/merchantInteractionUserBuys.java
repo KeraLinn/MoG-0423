@@ -32,10 +32,10 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
     int playerPurse = 200;
     int itemPrice;
     int priceXqty = 0;
+    playerClass player = new playerClass();
     RecyclerView recyclerView;
     Commodity commodity = new Commodity("","",0,0);
-    ArrayList<Commodity> cityStockArrayList = commodity.getAmethystCityCommodityArrayList();
-    ArrayList<Commodity> userStockArrayList = commodity.getRubyaCommodityArrayList();
+    ArrayList<Commodity> cityStockArrayList = commodity.getSapphiraCommodityArrayList();
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -106,6 +106,10 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
 
     private void completeTransaction() {
         playerPurse -= totalPurchase;
+        player.setPlayerPurse(playerPurse);
+        if (playerPurse <= 0){
+            startActivity(new Intent(merchantInteractionUserBuys.this, gameOver.class));
+        }
         playerGold.setText(String.valueOf(playerPurse));
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -120,7 +124,7 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
                         merchantInteractionUserSells.class));
             }
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 builder.setMessage("Thanks for trading! Come again soon!");

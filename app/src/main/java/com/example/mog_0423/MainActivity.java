@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Button continueGameButton = findViewById(R.id.continueButton);
         continueGameButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity
                 .this, merchantInteractionUserBuys.class)));
-
+        continueGameButton.setVisibility(View.INVISIBLE);
         //TODO remove the myButton from screen_home.xml layout and from MainActivity.java. This
         // is here to demonstrate working code for commodityRecyclerView
         Button myButton;
         myButton = findViewById(R.id.buttonRecycler);
+        myButton.setVisibility(View.INVISIBLE);
         myButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity.this,
                 CommodityRecyclerViewDataClass.class)));
     }

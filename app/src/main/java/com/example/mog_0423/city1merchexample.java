@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class merchantInteractionUserSells extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class city1merchexample extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //TODO: need to implement this class for a selling activity as well
     ImageView merchantAvatar;
@@ -26,19 +26,23 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     TextView totalToPurchase;
     TextView playerGold;
     Button doneButton;
-    int totalPurchase = 0;
-    playerClass player;
+    int totalPurchase;
+    //TODO: NOT HARDCODE THE PURSE HERE BUT NOT SURE HOW TO GET IT TO TRAVEL.
+    playerClass player = new playerClass();
     int playerPurse = 200;
     int itemPrice;
     int priceXqty = 0;
-    Commodity commodity = new Commodity("", "", 0, 0);
-    ArrayList<Commodity> userStockArrayList = commodity.getRubyaCommodityArrayList();
-
+    Commodity commodity = new Commodity("","",0,0);
+    ArrayList<Commodity> cityStockArrayList = commodity.getAmethystCityCommodityArrayList();
+    ArrayAdapter<CharSequence> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
+
+        adapter = ArrayAdapter.createFromResource(this,R.array.numberqty,
+                android.R.layout.simple_spinner_item);
 
         setUpScreenAttachments();
 
@@ -51,43 +55,34 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     private void setUpScreenAttachments() {
         //TODO: possibly optimize this by putting all the ImageViews and then TextViews into
         // arrays? then use for loop to cycle through the stockList?
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.numberqty,
-                android.R.layout.simple_spinner_item);
-        TextView text = findViewById(R.id.textView9);
-        text.setText("What would you like to sell?");
+
         merchantAvatar = findViewById(R.id.merchantAvatar);
-        merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
+        merchantAvatar.setImageResource(R.drawable.icons8_merchant_m);
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
-        totalToPurchase.setText(String.valueOf(0));
         playerGold = findViewById(R.id.textviewTotalYourGold);
         playerGold.setText(String.valueOf(playerPurse));
-        playerGold.setVisibility(View.INVISIBLE);
-        TextView goldLabel = findViewById(R.id.yourGoldLabel);
-        goldLabel.setVisibility(View.INVISIBLE);
-
         doneButton = findViewById(R.id.completeTrade);
 
         item1 = findViewById(R.id.commodity_image5);
-        item1.setImageResource(userStockArrayList.get(0).getCommodityImage());
+        item1.setImageResource(cityStockArrayList.get(0).getCommodityImage());
         item2 = findViewById(R.id.commodity_image6);
-        item2.setImageResource(userStockArrayList.get(1).getCommodityImage());
+        item2.setImageResource(cityStockArrayList.get(1).getCommodityImage());
         item3 = findViewById(R.id.commodity_image7);
-        item3.setImageResource(userStockArrayList.get(2).getCommodityImage());
+        item3.setImageResource(cityStockArrayList.get(2).getCommodityImage());
         name1 = findViewById(R.id.commodityName5);
-        name1.setText(userStockArrayList.get(0).getCommodityName());
+        name1.setText(cityStockArrayList.get(0).getCommodityName());
         name2 = findViewById(R.id.commodityName6);
-        name2.setText(userStockArrayList.get(1).getCommodityName());
+        name2.setText(cityStockArrayList.get(1).getCommodityName());
         name3 = findViewById(R.id.commodityName7);
-        name3.setText(userStockArrayList.get(2).getCommodityName());
+        name3.setText(cityStockArrayList.get(2).getCommodityName());
 
         price1 = findViewById(R.id.commodityPrice5);
-        price1.setText(String.valueOf(userStockArrayList.get(0).getCommodityPrice()));
+        price1.setText(String.valueOf(cityStockArrayList.get(0).getCommodityPrice()));
         price2 = findViewById(R.id.commodityPrice6);
-        price2.setText(String.valueOf(userStockArrayList.get(1).getCommodityPrice()));
+        price2.setText(String.valueOf(cityStockArrayList.get(1).getCommodityPrice()));
         price3 = findViewById(R.id.commodityPrice7);
-        price3.setText(String.valueOf(userStockArrayList.get(2).getCommodityPrice()));
+        price3.setText(String.valueOf(cityStockArrayList.get(2).getCommodityPrice()));
 
         pick1 = findViewById(R.id.spinner);
         pick1.setAdapter(adapter);
@@ -101,17 +96,31 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     }
 
     private void completeTransaction() {
-        playerPurse += totalPurchase;
-//        player.setPlayerPurse(playerPurse);
+        playerPurse -= totalPurchase;
+        player.setPlayerPurse(playerPurse);
+        if (playerPurse <= 0){
+            startActivity(new Intent(city1merchexample.this, gameOver.class));
+        }
+
+        playerGold.setText(String.valueOf(playerPurse));
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Deal!")
-                .setMessage("Here's your current gold: " + playerPurse + "\n\nThanks for trading!" +
-                        " Come again soon!");
-        builder.setPositiveButton("Bye!", new DialogInterface.OnClickListener() {
+        builder.setTitle("Let's make a deal!")
+                .setMessage("Here's your total: " + playerPurse + "\n\nWould you like to sell me " +
+                        "something?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(merchantInteractionUserSells.this, city1merchexamplearrival.class));
+                startActivity(new Intent(city1merchexample.this,
+                        city1merchexamplesell.class));
+            }
+        });
+        builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                builder.setMessage("Thanks for trading! Come again soon!");
+                startActivity(new Intent(city1merchexample.this, cityTravel.class));
             }
         });
         builder.show();
@@ -122,15 +131,17 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         int qty;
         if (pick1.equals(parent)) {
             qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(0).commodityPrice;
+            itemPrice = cityStockArrayList.get(0).commodityPrice;
             priceXqty = qty * itemPrice;
-        } else if (pick2.equals(parent)) {
+        }
+        else if (pick2.equals(parent)){
             qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(1).commodityPrice;
+            itemPrice = cityStockArrayList.get(1).commodityPrice;
             priceXqty = qty * itemPrice;
-        } else if (pick3.equals(parent)) {
+        }
+        else if (pick3.equals(parent)){
             qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(2).commodityPrice;
+            itemPrice = cityStockArrayList.get(2).commodityPrice;
             priceXqty = qty * itemPrice;
         }
         totalPurchase += priceXqty;
@@ -142,4 +153,7 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     public void onNothingSelected(AdapterView<?> parent) {
         parent.getItemIdAtPosition(0);
     }
+
+
+
 }

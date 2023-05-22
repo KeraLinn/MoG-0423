@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class merchantInteractionUserSells extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class city1merchexamplesell extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //TODO: need to implement this class for a selling activity as well
     ImageView merchantAvatar;
@@ -27,8 +27,8 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     TextView playerGold;
     Button doneButton;
     int totalPurchase = 0;
-    playerClass player;
-    int playerPurse = 200;
+    playerClass player = new playerClass();
+    int playerPurse = player.getPlayerPurse();
     int itemPrice;
     int priceXqty = 0;
     Commodity commodity = new Commodity("", "", 0, 0);
@@ -57,7 +57,7 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         TextView text = findViewById(R.id.textView9);
         text.setText("What would you like to sell?");
         merchantAvatar = findViewById(R.id.merchantAvatar);
-        merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
+        merchantAvatar.setImageResource(R.drawable.icons8_merchant_m);
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
         totalToPurchase.setText(String.valueOf(0));
@@ -102,7 +102,7 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
 
     private void completeTransaction() {
         playerPurse += totalPurchase;
-//        player.setPlayerPurse(playerPurse);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("Deal!")
@@ -111,7 +111,8 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         builder.setPositiveButton("Bye!", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(merchantInteractionUserSells.this, city1merchexamplearrival.class));
+                    startActivity(new Intent(city1merchexamplesell.this,
+                            gameWon.class));
             }
         });
         builder.show();

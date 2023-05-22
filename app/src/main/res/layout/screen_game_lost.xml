@@ -7,11 +7,11 @@
     android:background="@drawable/pexels_codioful__formerly_gradienta__7130537">
 
     <TextView
-        android:id="@+id/congrats"
+        android:id="@+id/gameOver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="74dp"
-        android:text="CONGRATULATIONS!!"
+        android:text="GAME OVER"
         android:textAlignment="center"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -27,13 +27,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="40dp"
-        android:text="@string/you_won"
+        android:text="@string/you_lost"
         android:textAlignment="center"
-        android:textSize="30sp"
         android:textColor="@color/Onyx"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/congrats" />
+        app:layout_constraintTop_toBottomOf="@+id/gameOver" />
 
     <TextView
         android:id="@+id/credits"
