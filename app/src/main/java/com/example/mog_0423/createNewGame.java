@@ -6,6 +6,7 @@ import static com.example.mog_0423.R.id.radioButtonE;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,13 +25,15 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
     int profileImage;
     int playerGold;
     protected File newFile;
-
+    MediaPlayer player = MediaPlayer.create(createNewGame.this, R.raw.intro_music);
 
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_new_game);
+        player.start();
+
         Spinner difficultySpinner = findViewById(R.id.DifficultySpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.difficultyList, android.R.layout.simple_spinner_item);
@@ -84,21 +87,6 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
             profileImage = radioButtonC;
         } else if (id == radioButtonE) {
             profileImage = radioButtonE;
-                /*                }
-                break;*/
-/*            case R.id.radioGroup2:
-                switch(checkedId){*/
-                  /*  case radioButtonH:
-                        profileImage = radioButtonH;
-                        break;
-                    case radioButtonBlue:
-                        profileImage = radioButtonBlue;
-                        break;
-                    case radioButtonDragon:
-                        profileImage = radioButtonDragon;
-                        break;
-                }*/
-            // break;
         }
     }
 }
