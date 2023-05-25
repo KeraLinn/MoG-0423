@@ -1,29 +1,27 @@
 package com.example.mog_0423;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     /*private SoundPool soundPool;
     private int soundLostGame, soundWonGame, soundIntroTheme, soundJadeTheme, soundOpalTheme;*/
-    public MediaPlayer mediaPlayerMainActivity;
+    public MediaPlayer mediaPlayer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_home);
-        mediaPlayerMainActivity = MediaPlayer.create(this,R.raw.intro_music);
-        mediaPlayerMainActivity.start();
-        mediaPlayerMainActivity.setLooping(true);
-
+        /*mediaPlayer = MediaPlayer.create(this,R.raw.intro_music);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);
+*/
 
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -49,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
         soundOpalTheme = soundPool.load(this,R.raw.opalancy_theme,1);*/
 
         Button newGameButton = findViewById(R.id.newGameButton);
-        newGameButton.setOnClickListener((v -> startNewGameWarningDialog()));
+        newGameButton.setOnClickListener(v -> startActivity(new Intent(MainActivity
+                .this, createNewGame.class)));
 
         Button continueGameButton = findViewById(R.id.continueButton);
         continueGameButton.setOnClickListener((View v) -> {
-            startActivity(new Intent(MainActivity
-                    .this, merchantInteractionUserBuys.class));
+            startActivity(new Intent(MainActivity.this, merchantInteractionUserBuys.class));
         });
         //continueGameButton.setVisibility(View.INVISIBLE);
         //TODO remove the myButton from screen_home.xml layout and from MainActivity.java. This
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         myButton.setOnClickListener((View v) -> startActivity(new Intent(MainActivity.this,
                 CommodityRecyclerViewDataClass.class)));
     }
-    public void startNewGameWarningDialog(){
+    /*public void startNewGameWarningDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle(R.string.new_game_warning_dialog_title)
@@ -84,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         builder.show();
-    }
+    }*/
 /*
     public void Play(View v){
         if (mediaPlayer == null){
