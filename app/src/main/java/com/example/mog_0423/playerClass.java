@@ -1,7 +1,5 @@
 package com.example.mog_0423;
 
-import java.io.File;
-
 public class playerClass extends createNewGame {
     String playerName;
     int playerAvatar;
@@ -12,12 +10,6 @@ public class playerClass extends createNewGame {
     }
 
     int playerPurse;
-    File playerFile;
-
-    public File getPlayerFile() {
-        playerFile = this.newFile;
-        return playerFile;
-    }
 
     public String getPlayerName() {
         playerName = this.userName;
