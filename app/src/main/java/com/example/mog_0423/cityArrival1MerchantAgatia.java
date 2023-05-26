@@ -9,43 +9,28 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class cityArrival1Merchant extends AppCompatActivity {
-
+public class cityArrival1MerchantAgatia extends AppCompatActivity {
     //1 merchant: Tourmalina, Sapphira, Diamondaria, Amethyst City, Agatia
-
     TextView welcomeText;
     TextView cityText;
     ImageView merchantImage;
-
-
+    Button tradeButton, nextCityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_city_arrival_1_merchant);
-
         welcomeText = findViewById(R.id.textView);
         cityText = findViewById(R.id.textView6);
         merchantImage = findViewById(R.id.merchant1);
-        loadSapphira();
-
-        Button tradeButton = findViewById(R.id.tradebutton);
-        Button nextCityButton = findViewById(R.id.nextCityButton);
-
-
-
-        tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1Merchant.this,
-                merchantInteractionUserBuys.class
-        )));
-        nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1Merchant.this,
-                cityTravel.class
-        )));
+        tradeButton = findViewById(R.id.tradebutton);
+        nextCityButton = findViewById(R.id.nextCityButton);
+        welcomeText.setText(R.string.agatiaWelcome);
+        cityText.setText(R.string.agatiaText);
+        merchantImage.setImageResource(R.drawable.icons8_avatar_64_m_greysuit);
+        tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAgatia.this,
+                merchantInteractionUserBuys.class)));
+        nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAgatia.this,
+                cityTravel.class)));
     }
-
-    public void loadSapphira() {
-        welcomeText.setText(R.string.sapphiraWelcome);
-        cityText.setText(R.string.sapphiraText);
-        merchantImage.setImageResource(R.drawable.icons8_merchant_f);
-    }
-
 }

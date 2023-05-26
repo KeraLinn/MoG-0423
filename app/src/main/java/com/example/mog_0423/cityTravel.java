@@ -15,8 +15,6 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
     //2 merchants: Rubya, Emeraldis, Jade Empire, Onyx Coast, Opalancy
     int cityChoiceInt = 0;
     public String cityChoiceString;
-    public cityArrival1Merchant cityArrival1Merchant;
-    public cityArrival2Merchants cityArrival2Merchants;
     Button cityPickButton;
 
     @Override
@@ -32,56 +30,71 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
 
         citySpinner.setAdapter(adapter);
         citySpinner.setOnItemSelectedListener(this);
-
-
-
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        //TODO: fill out remaining switch cases and ensure they have the appropriate loadCity
-        // method in their class.
         cityChoiceString = parent.getItemAtPosition(position).toString();
         cityChoiceInt = (int) parent.getItemIdAtPosition(position);
-        switch (cityChoiceInt) {
-            case 0:
-                //rubya
-            case 4:
-                //diamondaria
-            case 6:
-                //onyx
-            case 7:
-                //opalancy
-            case 8:
-                /*cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
-                        cityArrival1Merchant.class)));*/
-                cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
-                        cityArrival1Merchant.class)));
-                break;
-            case 1:
-                //tourmalina
-            case 2:
-                /*cityPickButton.setOnClickListener((View v) -> {
-                    cityArrival1Merchant.loadSapphira();
-                    startActivity(new Intent(cityTravel.this,
-                            cityArrival1Merchant.class));*//*
-                });*/
-            case 3:
-            //emeraldis
-
-
-            case 5:
-                //jade
-            case 9:
-                //amethyst
-            case 10:
-                //agatia
-                /*cityPickButton.setOnClickListener((View v) -> startActivity(new Intent(cityTravel.this,
-                        cityArrival2Merchants.class)));
-                break;*/
+        if (cityChoiceInt == 0) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival2MerchantsRubya.class));
+            });
+        }
+        if (cityChoiceInt == 1) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival1MerchantTourmalina.class));
+            });
+        }
+        if (cityChoiceInt == 2) {
+            cityPickButton.setOnClickListener((View view1) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival1MerchantSapphira.class));
+            });
+        }
+        if (cityChoiceInt == 3) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival2MerchantsEmeraldis.class));
+            });
+        }
+        if (cityChoiceInt == 4) {
+            cityPickButton.setOnClickListener((View v) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival1MerchantDiamondaria.class));
+            });
+        }
+        if (cityChoiceInt == 5) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival2MerchantsJadeEmpire.class));
+            });
+        }
+        if (cityChoiceInt == 6) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival2MerchantsOnyxCoast.class));
+            });
+        } else if (cityChoiceInt == 7) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival2MerchantsOpalancy.class));
+            });
+        } else if (cityChoiceInt == 8) {
+            cityPickButton.setOnClickListener((View vie) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival1MerchantAmethystCity.class));
+            });
+        }
+        else{
+            cityPickButton.setOnClickListener((View view2) -> {
+                startActivity(new Intent(cityTravel.this,
+                        cityArrival1MerchantAgatia.class));
+            });
         }
     }
-
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

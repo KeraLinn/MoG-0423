@@ -49,20 +49,14 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
         } else {
             player.setPlayerName(userName);
         }
-        switch (player.difficultyLevel) {
+        /*switch (player.difficultyLevel) {
             case 1:
-                player.setPlayerPurse(500);
-                player.setNumStartItems(5);
-                player.setWinParameter(1000);
+
             case 2:
-                player.setPlayerPurse(400);
-                player.setNumStartItems(4);
-                player.setWinParameter(2500);
+
             case 3:
-                player.setPlayerPurse(200);
-                player.setNumStartItems(2);
-                player.setWinParameter(5000);
-        }
+
+        }*/
     }
 
     //region handle Spinner and Radio Button selections
@@ -71,12 +65,21 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
         switch (parent.getSelectedItemPosition()) {
             case 1:
                 player.setDifficultyLevel(1);
+                player.setPlayerPurse(500);
+                player.setNumStartItems(5);
+                player.setWinParameter("1000 Gold");
                 break;
             case 2:
                 player.setDifficultyLevel(2);
+                player.setPlayerPurse(400);
+                player.setNumStartItems(4);
+                player.setWinParameter("2500 Gold");
                 break;
             case 3:
                 player.setDifficultyLevel(3);
+                player.setPlayerPurse(200);
+                player.setNumStartItems(2);
+                player.setWinParameter("5000 Gold");
                 break;
         }
     }

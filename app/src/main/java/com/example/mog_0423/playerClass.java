@@ -7,9 +7,14 @@ public class playerClass extends createNewGame {
     int difficultyLevel;
     Commodity[] userInventory;
     int numStartItems;
-    int winParameter;
 
-    public void setWinParameter(int winParameter) {
+    public String getWinParameter() {
+        return winParameter;
+    }
+
+    String winParameter;
+
+    public void setWinParameter(String winParameter) {
         this.winParameter = winParameter;
     }
 
