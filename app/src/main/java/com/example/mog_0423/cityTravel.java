@@ -14,7 +14,7 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
     //1 merchant: Tourmalina, Sapphira, Diamondaria, Amethyst City, Agatia
     //2 merchants: Rubya, Emeraldis, Jade Empire, Onyx Coast, Opalancy
     int cityChoiceInt = 0;
-    public String cityChoiceString;
+    Intent intent;
     Button cityPickButton;
 
     @Override
@@ -30,69 +30,35 @@ public class cityTravel extends AppCompatActivity implements AdapterView.OnItemS
 
         citySpinner.setAdapter(adapter);
         citySpinner.setOnItemSelectedListener(this);
+        cityPickButton.setOnClickListener((View v) -> startActivity(intent));
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        cityChoiceString = parent.getItemAtPosition(position).toString();
-        cityChoiceInt = (int) parent.getItemIdAtPosition(position);
-        if (cityChoiceInt == 0) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival2MerchantsRubya.class));
-            });
-        }
-        if (cityChoiceInt == 1) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival1MerchantTourmalina.class));
-            });
-        }
-        if (cityChoiceInt == 2) {
-            cityPickButton.setOnClickListener((View view1) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival1MerchantSapphira.class));
-            });
-        }
-        if (cityChoiceInt == 3) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival2MerchantsEmeraldis.class));
-            });
-        }
-        if (cityChoiceInt == 4) {
-            cityPickButton.setOnClickListener((View v) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival1MerchantDiamondaria.class));
-            });
-        }
-        if (cityChoiceInt == 5) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival2MerchantsJadeEmpire.class));
-            });
-        }
-        if (cityChoiceInt == 6) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival2MerchantsOnyxCoast.class));
-            });
-        } else if (cityChoiceInt == 7) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival2MerchantsOpalancy.class));
-            });
-        } else if (cityChoiceInt == 8) {
-            cityPickButton.setOnClickListener((View vie) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival1MerchantAmethystCity.class));
-            });
-        }
-        else{
-            cityPickButton.setOnClickListener((View view2) -> {
-                startActivity(new Intent(cityTravel.this,
-                        cityArrival1MerchantAgatia.class));
-            });
+        intent = new Intent();
+        cityChoiceInt = parent.getSelectedItemPosition();
+        switch(cityChoiceInt){
+            case 0:
+                intent.setClass(cityTravel.this,cityArrival2MerchantsRubya.class);
+                break;
+            case 1: intent.setClass(cityTravel.this, cityArrival1MerchantTourmalina.class);
+                break;
+            case 2: intent.setClass(cityTravel.this,cityArrival1MerchantSapphira.class);
+                break;
+            case 3: intent.setClass(cityTravel.this, cityArrival2MerchantsEmeraldis.class);
+                break;
+            case 4: intent.setClass(cityTravel.this,cityArrival1MerchantDiamondaria.class);
+                break;
+            case 5: intent.setClass(cityTravel.this, cityArrival2MerchantsJadeEmpire.class);
+                break;
+            case 6: intent.setClass(cityTravel.this, cityArrival2MerchantsOnyxCoast.class);
+                break;
+            case 7: intent.setClass(cityTravel.this, cityArrival2MerchantsOpalancy.class);
+                break;
+            case 8: intent.setClass(cityTravel.this, cityArrival1MerchantAmethystCity.class);
+                break;
+            case 9: intent.setClass(cityTravel.this, cityArrival1MerchantAgatia.class);
+                break;
         }
     }
     @Override
