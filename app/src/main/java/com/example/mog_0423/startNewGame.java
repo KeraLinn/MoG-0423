@@ -1,6 +1,7 @@
 package com.example.mog_0423;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,9 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class startNewGame extends AppCompatActivity {
-    /*MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayer;
 
-    public void setMusic() {
+    /*public void setMusic() {
         mediaPlayer.selectTrack(R.raw.jade_empire_theme);
         *//*if (mediaPlayer.isPlaying()){
             mediaPlayer.stop();
@@ -32,6 +33,13 @@ public class startNewGame extends AppCompatActivity {
 
         goalTextView = findViewById(R.id.goalTextView);
 
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+            mediaPlayer = MediaPlayer.create(this,R.raw.opalancy_theme);
+            mediaPlayer.start();
+        }
         //setMusic();
        // mediaPlayer = MediaPlayer.create(this,R.raw.jade_empire_theme);*/
 
