@@ -11,16 +11,18 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     /*private SoundPool soundPool;
     private int soundLostGame, soundWonGame, soundIntroTheme, soundJadeTheme, soundOpalTheme;*/
-    public MediaPlayer mediaPlayer;
-
+    protected static MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_home);
-        mediaPlayer = MediaPlayer.create(this,R.raw.intro_music);
-        mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.intro_music);
         mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+        /*mediaPlayer = MediaPlayer.create(this,R.raw.intro_music);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);*/
 
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             AudioAttributes audioAttributes = new AudioAttributes.Builder()

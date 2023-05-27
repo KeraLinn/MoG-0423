@@ -14,6 +14,10 @@
         <activity
             android:name=".cityTravel"/>
         <activity
+            android:name=".mediaPlayer"
+            android:launchMode="singleTop"/>
+        <!--<service android:name=".mediaPlayer"/>-->
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,8 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommodityRecyclerViewDataClass" />
-        <activity android:name=".createNewGame"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".createNewGame"/>
         <activity android:name=".startNewGame" />
         <activity android:name=".merchantInteractionUserBuys" />
         <activity android:name=".merchantInteractionUserSells" />
