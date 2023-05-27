@@ -111,7 +111,7 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         builder.setPositiveButton("Bye!", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(merchantInteractionUserSells.this, city1merchexamplearrival.class));
+                startActivity(new Intent(merchantInteractionUserSells.this, cityTravel.class));
             }
         });
         builder.show();

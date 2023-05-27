@@ -23,6 +23,7 @@ class Commodity {
     ArrayList<Commodity> onyxCoastCommodityArrayList = new ArrayList<>();
     ArrayList<Commodity> agatiaCommodityArrayList = new ArrayList<>();
     ArrayList<Commodity> amethystCityCommodityArrayList = new ArrayList<>();
+    ArrayList<Commodity> startingInventoryArrayList = new ArrayList<>();
 
     public Commodity(String commodityName, String commodityLocation, int commodityPrice,
                      int commodityImage) {
@@ -51,6 +52,16 @@ class Commodity {
     }
 
     public int getQuantityAvailable() { return qtyAvail;  }
+
+    public ArrayList<Commodity> getStartingInventoryArrayList() {
+        startingInventoryArrayList.add(new Commodity("Mango","Opalancy",getCommodityPrice(),
+                R.drawable.icons8_mango_100));
+        startingInventoryArrayList.add(new Commodity("Potato","Agatia",getCommodityPrice(),
+                R.drawable.icons8_potato_100));
+        startingInventoryArrayList.add(new Commodity("Orange","Opalancy",getCommodityPrice(),
+                R.drawable.icons8_orange_100));
+        return startingInventoryArrayList;
+    }
 
     public ArrayList<Commodity> getOpalancyCommodityArrayList() {
         opalancyCommodityArrayList.add(new Commodity("Apples","Opalancy", getCommodityPrice(),

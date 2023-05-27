@@ -95,12 +95,10 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
             priceXqty1 = qty * itemPrice;
         }
         else if (pick2.equals(parent)){
-
             itemPrice = cityStockArrayList.get(1).commodityPrice;
             priceXqty2 = qty * itemPrice;
         }
         else if (pick3.equals(parent)){
-
             itemPrice = cityStockArrayList.get(2).commodityPrice;
             priceXqty3 = qty * itemPrice;
         }
