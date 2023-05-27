@@ -86,7 +86,7 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        player.setDifficultyLevel(1);
+        player.setDifficultyLevel(0);
     }
 
     public void onRadioButtonClicked(View v) {

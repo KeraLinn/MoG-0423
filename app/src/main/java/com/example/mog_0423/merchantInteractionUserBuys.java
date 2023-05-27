@@ -13,14 +13,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class merchantInteractionUserBuys extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    //TODO: need to implement this class for a selling activity as well
     ImageView merchantAvatar;
     ImageView item1, item2, item3;
     TextView name1, name2, name3, price1, price2, price3;
@@ -31,9 +28,8 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
     int totalPurchase = 0;
     int playerPurse = 200;
     int itemPrice;
-    int priceXqty = 0;
+    int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
-    RecyclerView recyclerView;
     Commodity commodity = new Commodity("","",0,0);
     ArrayList<Commodity> cityStockArrayList = commodity.getSapphiraCommodityArrayList();
     ArrayAdapter<CharSequence> adapter;
@@ -42,29 +38,16 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_trading);
-
-        recyclerView = findViewById(R.id.tradingRecyclerView);
-
         adapter = ArrayAdapter.createFromResource(this,R.array.numberqty,
                 android.R.layout.simple_spinner_item);
-
         setUpScreenAttachments();
-
-        merchantStockRecyclerViewAdapter stockAdapter = new merchantStockRecyclerViewAdapter(this,
-                cityStockArrayList);
-        recyclerView.setAdapter(stockAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         doneButton.setOnClickListener(v -> {
             completeTransaction();
-
         });
     }
 
     private void setUpScreenAttachments() {
-        //TODO: possibly optimize this by putting all the ImageViews and then TextViews into
-        // arrays? then use for loop to cycle through the stockList?
-
+        //TODO: optimize
         merchantAvatar = findViewById(R.id.merchantAvatar);
         merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
         totalToPurchase = findViewById(R.id.textviewTotal);
@@ -104,6 +87,27 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         pick3.setOnItemSelectedListener(this);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        int qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
+        if (pick1.equals(parent)) {
+            itemPrice = cityStockArrayList.get(0).commodityPrice;
+            priceXqty1 = qty * itemPrice;
+        }
+        else if (pick2.equals(parent)){
+
+            itemPrice = cityStockArrayList.get(1).commodityPrice;
+            priceXqty2 = qty * itemPrice;
+        }
+        else if (pick3.equals(parent)){
+
+            itemPrice = cityStockArrayList.get(2).commodityPrice;
+            priceXqty3 = qty * itemPrice;
+        }
+        totalPurchase = priceXqty1 + priceXqty2 + priceXqty3;
+        totalToPurchase.setText(String.valueOf(totalPurchase));
+    }
+
     private void completeTransaction() {
         playerPurse -= totalPurchase;
         player.setPlayerPurse(playerPurse);
@@ -113,7 +117,6 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         playerGold.setText(String.valueOf(playerPurse));
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         builder.setTitle("Let's make a deal!")
                 .setMessage("Here's your total: " + playerPurse + "\n\nWould you like to sell me " +
                         "something?");
@@ -133,30 +136,6 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         });
         builder.show();
     }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        int qty;
-        if (pick1.equals(parent)) {
-            qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = cityStockArrayList.get(0).commodityPrice;
-            priceXqty = qty * itemPrice;
-        }
-        else if (pick2.equals(parent)){
-            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = cityStockArrayList.get(1).commodityPrice;
-            priceXqty = qty * itemPrice;
-        }
-        else if (pick3.equals(parent)){
-            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = cityStockArrayList.get(2).commodityPrice;
-            priceXqty = qty * itemPrice;
-        }
-        totalPurchase += priceXqty;
-        totalToPurchase.setText(String.valueOf(totalPurchase));
-    }
-
-
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         parent.getItemIdAtPosition(0);
