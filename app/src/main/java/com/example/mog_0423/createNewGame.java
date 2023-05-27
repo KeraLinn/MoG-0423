@@ -19,11 +19,13 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
     int profileImage;
     int playerGold;
     TextView userInputName;
+    String winParameter;
+    int numStartItems;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_new_game);
-        player = new playerClass();
+
 
     //region findViewByIds
         userInputName = findViewById(R.id.editTextTextPersonName2);
@@ -43,43 +45,28 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
             startActivity(new Intent(createNewGame.this, startNewGame.class));
         });
     }
-    private void finishSetup() {
-        if (userInputName.toString().isEmpty()) {
-            player.setPlayerName("Haven");
-        } else {
-            player.setPlayerName(userName);
-        }
-        /*switch (player.difficultyLevel) {
-            case 1:
-
-            case 2:
-
-            case 3:
-
-        }*/
-    }
 
     //region handle Spinner and Radio Button selections
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         switch (parent.getSelectedItemPosition()) {
+            case 0:
+                chosenDifficultyLevel = 1;
+                playerGold = 500;
+                numStartItems = 5;
+                winParameter = "1000 Gold";
+                break;
             case 1:
-                player.setDifficultyLevel(1);
-                player.setPlayerPurse(500);
-                player.setNumStartItems(5);
-                player.setWinParameter("1000 Gold");
+                chosenDifficultyLevel = 2;
+                playerGold = 400;
+                numStartItems = 4;
+                winParameter = "2500 Gold";
                 break;
             case 2:
-                player.setDifficultyLevel(2);
-                player.setPlayerPurse(400);
-                player.setNumStartItems(4);
-                player.setWinParameter("2500 Gold");
-                break;
-            case 3:
-                player.setDifficultyLevel(3);
-                player.setPlayerPurse(200);
-                player.setNumStartItems(2);
-                player.setWinParameter("5000 Gold");
+                chosenDifficultyLevel = 3;
+                playerGold = 200;
+                numStartItems = 2;
+                winParameter = "5000 Gold";
                 break;
         }
     }
@@ -98,19 +85,31 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
         button5 = findViewById(R.id.radioButtonDog2);
         button6 = findViewById(R.id.radioButtonCrab2);
         if (button1.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_butterfly_100);
+            profileImage = 1;
         } else if (button2.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_cat_100);
+            profileImage = 2;
         } else if (button3.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_elephant_100);
+            profileImage = 3;
         } else if (button4.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_hummingbird_100);
+            profileImage = 4;
         } else if (button5.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_german_shepherd_100);
+            profileImage = 5;
         } else if (button6.isChecked()) {
-            player.setPlayerAvatar(R.drawable.icons8_crab_100);
+            profileImage = 6;
         }
     }
     //endregion handle Spinner and Radio Button selections
+    private void finishSetup() {
+        if (userInputName.toString().isEmpty() || userInputName == null) {
+            userName = "Haven";
+        } else {
+            userName = userInputName.toString();
+        }
+        player = new playerClass();
+        player.playerAvatar = profileImage;
+        player.setPlayerPurse(playerGold);// = playerGold;
+        player.difficultyLevel = chosenDifficultyLevel;
+        player.playerName = userName;
+    }
 }
 

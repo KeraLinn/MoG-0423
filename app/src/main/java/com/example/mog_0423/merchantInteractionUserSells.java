@@ -27,12 +27,12 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     TextView playerGold;
     Button doneButton;
     int totalPurchase = 0;
-    playerClass player;
-    int playerPurse = 200;
+    playerClass player = new playerClass();
+    int playerPurse;
     int itemPrice;
-    int priceXqty = 0;
+    int priceXqty1, priceXqty2, priceXqty3;
     Commodity commodity = new Commodity("", "", 0, 0);
-    ArrayList<Commodity> userStockArrayList = commodity.getRubyaCommodityArrayList();
+    ArrayList<Commodity> userStockArrayList = commodity.getStartingInventoryArrayList();
 
 
     @Override
@@ -49,8 +49,6 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
     }
 
     private void setUpScreenAttachments() {
-        //TODO: possibly optimize this by putting all the ImageViews and then TextViews into
-        // arrays? then use for loop to cycle through the stockList?
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.numberqty,
                 android.R.layout.simple_spinner_item);
@@ -61,11 +59,9 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
         totalToPurchase.setText(String.valueOf(0));
+        playerPurse = player.getPlayerPurse();
         playerGold = findViewById(R.id.textviewTotalYourGold);
         playerGold.setText(String.valueOf(playerPurse));
-        playerGold.setVisibility(View.INVISIBLE);
-        TextView goldLabel = findViewById(R.id.yourGoldLabel);
-        goldLabel.setVisibility(View.INVISIBLE);
 
         doneButton = findViewById(R.id.completeTrade);
 
@@ -100,13 +96,36 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         pick3.setOnItemSelectedListener(this);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        int qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
+        if (pick1.equals(parent)) {
+            itemPrice = userStockArrayList.get(0).commodityPrice;
+            priceXqty1 = qty * itemPrice;
+        } else if (pick2.equals(parent)) {
+            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
+            itemPrice = userStockArrayList.get(1).commodityPrice;
+            priceXqty2 = qty * itemPrice;
+        } else if (pick3.equals(parent)) {
+            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
+            itemPrice = userStockArrayList.get(2).commodityPrice;
+            priceXqty3 = qty * itemPrice;
+        }
+        totalPurchase = priceXqty1 + priceXqty2 + priceXqty3;
+        totalToPurchase.setText(String.valueOf(totalPurchase));
+    }
+
     private void completeTransaction() {
         playerPurse += totalPurchase;
-//        player.setPlayerPurse(playerPurse);
+        player.setPlayerPurse(playerPurse);
+        if (playerPurse >= 1000){
+            startActivity(new Intent(merchantInteractionUserSells.this, gameOver.class));
+        }
+        playerGold.setText(String.valueOf(playerPurse));
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         builder.setTitle("Deal!")
-                .setMessage("Here's your current gold: " + playerPurse + "\n\nThanks for trading!" +
+                .setMessage("Here's your total: " + totalPurchase + "\nWhich brings your total " +
+                        "Gold to: " + playerPurse + "\n\nThanks for trading!" +
                         " Come again soon!");
         builder.setPositiveButton("Bye!", new DialogInterface.OnClickListener() {
             @Override
@@ -117,25 +136,6 @@ public class merchantInteractionUserSells extends AppCompatActivity implements A
         builder.show();
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        int qty;
-        if (pick1.equals(parent)) {
-            qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(0).commodityPrice;
-            priceXqty = qty * itemPrice;
-        } else if (pick2.equals(parent)) {
-            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(1).commodityPrice;
-            priceXqty = qty * itemPrice;
-        } else if (pick3.equals(parent)) {
-            qty = Integer.parseInt((String) parent.getItemAtPosition(position));
-            itemPrice = userStockArrayList.get(2).commodityPrice;
-            priceXqty = qty * itemPrice;
-        }
-        totalPurchase += priceXqty;
-        totalToPurchase.setText(String.valueOf(totalPurchase));
-    }
 
 
     @Override

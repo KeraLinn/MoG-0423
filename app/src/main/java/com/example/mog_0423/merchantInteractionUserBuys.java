@@ -26,7 +26,7 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
     TextView playerGold;
     Button doneButton;
     int totalPurchase = 0;
-    int playerPurse = 200;
+    int playerPurse;
     int itemPrice;
     int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
@@ -52,6 +52,8 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
+        //player.getPlayerPurse();
+        playerPurse = player.getPlayerPurse();
         playerGold = findViewById(R.id.textviewTotalYourGold);
         playerGold.setText(String.valueOf(playerPurse));
         doneButton = findViewById(R.id.completeTrade);
