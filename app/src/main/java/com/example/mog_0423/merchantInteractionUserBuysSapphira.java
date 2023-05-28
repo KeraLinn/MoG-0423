@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class merchantInteractionUserBuys extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class merchantInteractionUserBuysSapphira extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ImageView merchantAvatar;
     ImageView item1, item2, item3;
@@ -52,7 +52,6 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         merchantAvatar.setImageResource(R.drawable.icons8_merchant_f);
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
-        //player.getPlayerPurse();
         playerPurse = player.getPlayerPurse();
         playerGold = findViewById(R.id.textviewTotalYourGold);
         playerGold.setText(String.valueOf(playerPurse));
@@ -112,7 +111,7 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         playerPurse -= totalPurchase;
         player.setPlayerPurse(playerPurse);
         if (playerPurse <= 0){
-            startActivity(new Intent(merchantInteractionUserBuys.this, gameOver.class));
+            startActivity(new Intent(merchantInteractionUserBuysSapphira.this, gameOver.class));
         }
         playerGold.setText(String.valueOf(playerPurse));
 
@@ -123,7 +122,7 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(merchantInteractionUserBuys.this,
+                startActivity(new Intent(merchantInteractionUserBuysSapphira.this,
                         merchantInteractionUserSells.class));
             }
         });
@@ -131,7 +130,7 @@ public class merchantInteractionUserBuys extends AppCompatActivity implements Ad
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 builder.setMessage("Thanks for trading! Come again soon!");
-                startActivity(new Intent(merchantInteractionUserBuys.this, cityTravel.class));
+                startActivity(new Intent(merchantInteractionUserBuysSapphira.this, cityTravel.class));
             }
         });
         builder.show();

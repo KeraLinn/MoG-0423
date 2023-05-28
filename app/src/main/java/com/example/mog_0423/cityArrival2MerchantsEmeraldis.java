@@ -33,10 +33,10 @@ public class cityArrival2MerchantsEmeraldis extends AppCompatActivity {
         welcomeText.setText(R.string.emeraldisWelcome);
         cityText.setText(R.string.emeraldisText);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsEmeraldis.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsEmeraldis.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsEmeraldis.this,
                 cityTravel.class

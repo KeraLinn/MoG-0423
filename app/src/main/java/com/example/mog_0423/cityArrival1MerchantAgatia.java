@@ -29,7 +29,7 @@ public class cityArrival1MerchantAgatia extends AppCompatActivity {
         cityText.setText(R.string.agatiaText);
         merchantImage.setImageResource(R.drawable.icons8_avatar_64_m_greysuit);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAgatia.this,
-                merchantInteractionUserBuys.class)));
+                merchantInteractionUserBuysAgatia.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAgatia.this,
                 cityTravel.class)));
     }

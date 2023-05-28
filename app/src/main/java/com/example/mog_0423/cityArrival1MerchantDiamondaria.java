@@ -29,7 +29,7 @@ public class cityArrival1MerchantDiamondaria extends AppCompatActivity {
         cityText.setText(R.string.diamondariaText);
         merchantImage.setImageResource(R.drawable.icons8_avatar_64_fblue);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantDiamondaria.this,
-                merchantInteractionUserBuys.class)));
+                merchantInteractionUserBuysDiamondaria.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantDiamondaria.this,
                 cityTravel.class)));
     }

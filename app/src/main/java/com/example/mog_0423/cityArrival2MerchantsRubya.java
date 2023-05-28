@@ -23,6 +23,7 @@ public class cityArrival2MerchantsRubya extends AppCompatActivity {
         setContentView(R.layout.screen_city_arrival_2_merchants);
         tradeButton = findViewById(R.id.tradebutton);
         tradeButton1 = findViewById(R.id.button2);
+        Button tradeButton2 = findViewById(R.id.letstrade);
         nextCityButton = findViewById(R.id.nextCityButton);
         merchantImage1 = findViewById(R.id.merchant1);
         merchantImage2 = findViewById(R.id.merchant2);
@@ -33,11 +34,12 @@ public class cityArrival2MerchantsRubya extends AppCompatActivity {
         welcomeText.setText(R.string.rubyaWelcome);
         cityText.setText(R.string.rubyaText);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsRubya.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysRubya1.class
         )));
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsRubya.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysRubya2.class
         )));
+        tradeButton2.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsRubya.this, merchantInteractionUserBuysRubya1.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsRubya.this,
                 cityTravel.class
         )));

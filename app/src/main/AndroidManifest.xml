@@ -29,7 +29,6 @@
         <activity android:name=".CommodityRecyclerViewDataClass" />
         <activity android:name=".createNewGame"/>
         <activity android:name=".startNewGame" />
-        <activity android:name=".merchantInteractionUserBuys" />
         <activity android:name=".merchantInteractionUserSells" />
         <activity android:name=".cityArrival1MerchantAgatia" />
         <activity android:name=".cityArrival2MerchantsOnyxCoast" />
@@ -41,6 +40,13 @@
         <activity android:name=".cityArrival2MerchantsRubya" />
         <activity android:name=".cityArrival1MerchantDiamondaria" />
         <activity android:name=".cityArrival2MerchantsJadeEmpire" />
+        <activity android:name=".merchantInteractionUserBuysSapphira" />
+        <activity android:name=".merchantInteractionUserBuysAgatia" />
+        <activity android:name=".merchantInteractionUserBuysDiamondaria" />
+        <activity android:name=".merchantInteractionUserBuysTourmalina" />
+        <activity android:name=".merchantInteractionUserBuysAmethystCity" />
+        <activity android:name=".merchantInteractionUserBuysRubya1" />
+        <activity android:name=".merchantInteractionUserBuysRubya2" />
         <activity android:name=".startingInventory" />
         <activity android:name=".gameOver" />
         <activity android:name=".gameWon" />

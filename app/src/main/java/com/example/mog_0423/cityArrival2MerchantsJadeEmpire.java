@@ -33,10 +33,10 @@ public class cityArrival2MerchantsJadeEmpire extends AppCompatActivity {
         welcomeText.setText(R.string.jadeWelcome);
         cityText.setText(R.string.jadeText);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsJadeEmpire.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsJadeEmpire.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsJadeEmpire.this,
                 cityTravel.class

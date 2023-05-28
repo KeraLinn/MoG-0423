@@ -29,7 +29,7 @@ public class cityArrival1MerchantTourmalina extends AppCompatActivity {
         cityText.setText(R.string.tourmalinaText);
         merchantImage.setImageResource(R.drawable.icons8_avatar_64_m_blackhat);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantTourmalina.this,
-                merchantInteractionUserBuys.class)));
+                cityArrival1MerchantTourmalina.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantTourmalina.this,
                 cityTravel.class)));
     }

@@ -33,10 +33,10 @@ public class cityArrival2MerchantsOnyxCoast extends AppCompatActivity {
         welcomeText.setText(R.string.onyxWelcome);
         cityText.setText(R.string.onyxText);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOnyxCoast.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOnyxCoast.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOnyxCoast.this,
                 cityTravel.class

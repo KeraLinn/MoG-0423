@@ -29,7 +29,7 @@ public class cityArrival1MerchantAmethystCity extends AppCompatActivity {
         cityText.setText(R.string.amethystText);
         merchantImage.setImageResource(R.drawable.icons8_avatar_64_f_red);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAmethystCity.this,
-                merchantInteractionUserBuys.class)));
+                cityArrival1MerchantAmethystCity.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantAmethystCity.this,
                 cityTravel.class)));
     }

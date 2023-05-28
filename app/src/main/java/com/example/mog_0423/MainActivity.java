@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button continueGameButton = findViewById(R.id.continueButton);
         continueGameButton.setOnClickListener((View v) -> {
-            startActivity(new Intent(MainActivity.this, merchantInteractionUserBuys.class));
+            startActivity(new Intent(MainActivity.this, merchantInteractionUserBuysSapphira.class));
         });
         //continueGameButton.setVisibility(View.INVISIBLE);
         //TODO remove the myButton from screen_home.xml layout and from MainActivity.java. This

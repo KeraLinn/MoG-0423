@@ -33,10 +33,10 @@ public class cityArrival2MerchantsOpalancy extends AppCompatActivity {
         welcomeText.setText(R.string.opalancyWelcome);
         cityText.setText(R.string.opalancyText);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
-                merchantInteractionUserBuys.class
+                merchantInteractionUserBuysSapphira.class
         )));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
                 cityTravel.class

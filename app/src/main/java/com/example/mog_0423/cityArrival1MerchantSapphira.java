@@ -29,7 +29,7 @@ public class cityArrival1MerchantSapphira extends AppCompatActivity {
         cityText.setText(R.string.sapphiraText);
         merchantImage.setImageResource(R.drawable.icons8_merchant_f);
         tradeButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantSapphira.this,
-                merchantInteractionUserBuys.class)));
+                merchantInteractionUserBuysSapphira.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival1MerchantSapphira.this,
                 cityTravel.class)));
     }
