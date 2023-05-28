@@ -30,8 +30,9 @@ public class merchantInteractionUserBuysSapphira extends AppCompatActivity imple
     int itemPrice;
     int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
-    Commodity commodity = new Commodity("","",0,0);
+    Commodity commodity = new Commodity("","",0,0,0);
     ArrayList<Commodity> cityStockArrayList = commodity.getSapphiraCommodityArrayList();
+    ArrayList<Commodity> userInventory = commodity.getStartingInventoryArrayList();
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -94,13 +95,28 @@ public class merchantInteractionUserBuysSapphira extends AppCompatActivity imple
         if (pick1.equals(parent)) {
             itemPrice = cityStockArrayList.get(0).commodityPrice;
             priceXqty1 = qty * itemPrice;
+            userInventory.add(new Commodity(cityStockArrayList.get(0).commodityName,
+                    cityStockArrayList.get(0).commodityLocation,
+                    cityStockArrayList.get(0).commodityPrice,
+                    cityStockArrayList.get(0).commodityImage,
+                    qty));
         }
         else if (pick2.equals(parent)){
             itemPrice = cityStockArrayList.get(1).commodityPrice;
             priceXqty2 = qty * itemPrice;
+            userInventory.add(new Commodity(cityStockArrayList.get(1).commodityName,
+                    cityStockArrayList.get(1).commodityLocation,
+                    cityStockArrayList.get(1).commodityPrice,
+                    cityStockArrayList.get(1).commodityImage,
+                    qty));
         }
         else if (pick3.equals(parent)){
             itemPrice = cityStockArrayList.get(2).commodityPrice;
+            userInventory.add(new Commodity(cityStockArrayList.get(2).commodityName,
+                    cityStockArrayList.get(2).commodityLocation,
+                    cityStockArrayList.get(2).commodityPrice,
+                    cityStockArrayList.get(2).commodityImage,
+                    qty));
             priceXqty3 = qty * itemPrice;
         }
         totalPurchase = priceXqty1 + priceXqty2 + priceXqty3;
@@ -115,6 +131,9 @@ public class merchantInteractionUserBuysSapphira extends AppCompatActivity imple
         }
         playerGold.setText(String.valueOf(playerPurse));
 
+
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Let's make a deal!")
                 .setMessage("Here's your total: " + playerPurse + "\n\nWould you like to sell me " +
@@ -123,7 +142,7 @@ public class merchantInteractionUserBuysSapphira extends AppCompatActivity imple
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startActivity(new Intent(merchantInteractionUserBuysSapphira.this,
-                        merchantInteractionUserSells.class));
+                        merchantInteractionUserSellsSapphira.class));
             }
         });
         builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {

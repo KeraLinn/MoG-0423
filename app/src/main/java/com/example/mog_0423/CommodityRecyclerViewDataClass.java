@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class CommodityRecyclerViewDataClass extends AppCompatActivity {
 
-    Commodity commodity = new Commodity("","",0,0);
+    Commodity commodity = new Commodity("","",0,0,0);
 
     ArrayList<Commodity> commodityList = new ArrayList<>();
     int[] commodityImages = {R.drawable.icons8_apples_plate_100,R.drawable.icons8_apricot_100,
@@ -64,16 +64,8 @@ public class CommodityRecyclerViewDataClass extends AppCompatActivity {
         for (int i = 0; i < commodityListNames.length; i++){
             commodityList.add(new Commodity(commodityListNames[i],
                     myMap.get(commodityListNames[i]),
-                    priceArray[i],commodityImages[i]));
+                    priceArray[i],commodityImages[i], commodity.qtyAvail));
         }
-        /*for(int i = 0; i < 5; i++){
-            commodity = commodity.agatiaCommodityVector.get(i);
-            commodityList.add(i,commodity.agatiaCommodityVector.get(i));
-        }*/
-        //TODO: RecyclerView needs some aesthetic work - add space between the rows, adjust the
-        // font. If decided to keep location on recyclerview row, may need to adjust the font size.
-        //TODO: attach the price and coin to the right side of the row so that they line up nicely.
-
     }
 
 }

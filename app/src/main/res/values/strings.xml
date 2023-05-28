@@ -140,7 +140,7 @@
         <item>Medium</item>
         <item>Hard</item>
     </string-array>
-    <string name="credit">Images and icons sourced from icons8.com</string>
+    <string name="credit">Images and icons sourced from icons8.com \nBackground Image Photo by Codioful (formerly Gradienta) from Pexels\nBackground Music: Relaxing by Music_For_Videos from Pixabay\nWin Sound Effect: Success Fanfare Trumpets by Pixabay from Pixabay\nLose Sound Effect: Verloren by Pixabay from Pixabay</string>
     <string-array name="Credits">
         <item name="icons8">Images and icons\t\ticons8.com</item>
         <item name="variousWikipedia">https://en.wikipedia.org/wiki/Oasis</item>

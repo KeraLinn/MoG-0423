@@ -23,6 +23,7 @@ public class cityArrival2MerchantsOpalancy extends AppCompatActivity {
         setContentView(R.layout.screen_city_arrival_2_merchants);
         tradeButton = findViewById(R.id.tradebutton);
         tradeButton1 = findViewById(R.id.button2);
+        Button tradeButton2 = findViewById(R.id.letstrade);
         nextCityButton = findViewById(R.id.nextCityButton);
         merchantImage1 = findViewById(R.id.merchant1);
         merchantImage2 = findViewById(R.id.merchant2);
@@ -38,6 +39,8 @@ public class cityArrival2MerchantsOpalancy extends AppCompatActivity {
         tradeButton1.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
                 merchantInteractionUserBuysSapphira.class
         )));
+        tradeButton2.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
+                merchantInteractionUserBuysOnyxCoast1.class)));
         nextCityButton.setOnClickListener((View v) -> startActivity(new Intent(cityArrival2MerchantsOpalancy.this,
                 cityTravel.class
         )));

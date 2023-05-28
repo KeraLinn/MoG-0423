@@ -13,9 +13,6 @@
         tools:targetApi="31">
         <activity
             android:name=".cityTravel"/>
-        <activity
-            android:name=".mediaPlayer"
-            android:launchMode="singleTop"/>
         <!--<service android:name=".mediaPlayer"/>-->
         <activity
             android:name=".MainActivity"
@@ -29,7 +26,6 @@
         <activity android:name=".CommodityRecyclerViewDataClass" />
         <activity android:name=".createNewGame"/>
         <activity android:name=".startNewGame" />
-        <activity android:name=".merchantInteractionUserSells" />
         <activity android:name=".cityArrival1MerchantAgatia" />
         <activity android:name=".cityArrival2MerchantsOnyxCoast" />
         <activity android:name=".cityArrival2MerchantsOpalancy" />
@@ -47,9 +43,31 @@
         <activity android:name=".merchantInteractionUserBuysAmethystCity" />
         <activity android:name=".merchantInteractionUserBuysRubya1" />
         <activity android:name=".merchantInteractionUserBuysRubya2" />
+        <activity android:name=".merchantInteractionUserBuysEmeraldis1" />
+        <activity android:name=".merchantInteractionUserBuysEmeraldis2" />
+        <activity android:name=".merchantInteractionUserBuysOpalancy1" />
+        <activity android:name=".merchantInteractionUserBuysOpalancy2" />
+        <activity android:name=".merchantInteractionUserBuysOnyxCoast1" />
+        <activity android:name=".merchantInteractionUserBuysOnyxCoast2" />
+        <activity android:name=".merchantInteractionUserBuysJadeEmpire1" />
+        <activity android:name=".merchantInteractionUserBuysJadeEmpire2" />
+        <activity android:name=".merchantInteractionUserSellsSapphira" />
+        <activity android:name=".merchantInteractionUserSellsRubya1" />
+        <activity android:name=".merchantInteractionUserSellsRubya2" />
+        <activity android:name=".merchantInteractionUserSellsEmeraldis1" />
+        <activity android:name=".merchantInteractionUserSellsEmeraldis2" />
+        <activity android:name=".merchantInteractionUserSellsOpalancy1" />
+        <activity android:name=".merchantInteractionUserSellsOpalancy2" />
+        <activity android:name=".merchantInteractionUserSellsOnyxCoast1" />
+        <activity android:name=".merchantInteractionUserSellsOnyxCoast2" />
+        <activity android:name=".merchantInteractionUserSellsJadeEmpire1" />
+        <activity android:name=".merchantInteractionUserSellsJadeEmpire2" />
+        <activity android:name=".merchantInteractionUserSellsTourmalina" />
+        <activity android:name=".merchantInteractionUserSellsAgatia" />
+        <activity android:name=".merchantInteractionUserSellsAmethystCity" />
+        <activity android:name=".merchantInteractionUserSellsDiamondaria" />
         <activity android:name=".startingInventory" />
         <activity android:name=".gameOver" />
-        <activity android:name=".gameWon" />
         <activity android:name="com.example.mog_0423.playerClass" />
 
         <meta-data

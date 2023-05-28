@@ -21,7 +21,7 @@ public class startingInventory extends AppCompatActivity {
     Intent intent;
     Random rand = new Random();
     int randomNum, max = 10, min = 1;
-    Commodity commodity = new Commodity("","",0,0);
+    Commodity commodity = new Commodity("","",0,0,0);
     ArrayList<Commodity> starterInventory = commodity.getStartingInventoryArrayList();
 
     protected void onCreate(Bundle savedInstanceState) {

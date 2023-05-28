@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class merchantInteractionUserBuysRubya2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class merchantInteractionUserBuysJadeEmpire1 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ImageView merchantAvatar;
     ImageView item1, item2, item3;
@@ -31,7 +31,7 @@ public class merchantInteractionUserBuysRubya2 extends AppCompatActivity impleme
     int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
     Commodity commodity = new Commodity("","",0,0,0);
-    ArrayList<Commodity> cityStockArrayList = commodity.getRubyaCommodityArrayList();
+    ArrayList<Commodity> cityStockArrayList = commodity.getJadeEmpireCommodityArrayList();
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -40,16 +40,17 @@ public class merchantInteractionUserBuysRubya2 extends AppCompatActivity impleme
         setContentView(R.layout.screen_trading);
         adapter = ArrayAdapter.createFromResource(this,R.array.numberqty,
                 android.R.layout.simple_spinner_item);
+
         setUpScreenAttachments();
         doneButton.setOnClickListener(v -> {
-            completeTransaction();
+            completeBuy();
         });
     }
 
     private void setUpScreenAttachments() {
         //TODO: optimize
         merchantAvatar = findViewById(R.id.merchantAvatar);
-        merchantAvatar.setImageResource(R.drawable.icons8_avatar_64_m_blackhat);
+        merchantAvatar.setImageResource(R.drawable.icons8_merchant_f_2);
         totalToPurchase = findViewById(R.id.textviewTotal);
         totalToPurchase.setText(String.valueOf(totalPurchase));
         playerPurse = player.getPlayerPurse();
@@ -58,24 +59,24 @@ public class merchantInteractionUserBuysRubya2 extends AppCompatActivity impleme
         doneButton = findViewById(R.id.completeTrade);
 
         item1 = findViewById(R.id.commodity_image5);
-        item1.setImageResource(cityStockArrayList.get(2).getCommodityImage());
+        item1.setImageResource(cityStockArrayList.get(0).getCommodityImage());
         item2 = findViewById(R.id.commodity_image6);
-        item2.setImageResource(cityStockArrayList.get(3).getCommodityImage());
+        item2.setImageResource(cityStockArrayList.get(1).getCommodityImage());
         item3 = findViewById(R.id.commodity_image7);
-        item3.setImageResource(cityStockArrayList.get(4).getCommodityImage());
+        item3.setImageResource(cityStockArrayList.get(2).getCommodityImage());
         name1 = findViewById(R.id.commodityName5);
-        name1.setText(cityStockArrayList.get(2).getCommodityName());
+        name1.setText(cityStockArrayList.get(0).getCommodityName());
         name2 = findViewById(R.id.commodityName6);
-        name2.setText(cityStockArrayList.get(3).getCommodityName());
+        name2.setText(cityStockArrayList.get(1).getCommodityName());
         name3 = findViewById(R.id.commodityName7);
-        name3.setText(cityStockArrayList.get(4).getCommodityName());
+        name3.setText(cityStockArrayList.get(2).getCommodityName());
 
         price1 = findViewById(R.id.commodityPrice5);
-        price1.setText(String.valueOf(cityStockArrayList.get(2).getCommodityPrice()));
+        price1.setText(String.valueOf(cityStockArrayList.get(0).getCommodityPrice()));
         price2 = findViewById(R.id.commodityPrice6);
-        price2.setText(String.valueOf(cityStockArrayList.get(3).getCommodityPrice()));
+        price2.setText(String.valueOf(cityStockArrayList.get(1).getCommodityPrice()));
         price3 = findViewById(R.id.commodityPrice7);
-        price3.setText(String.valueOf(cityStockArrayList.get(4).getCommodityPrice()));
+        price3.setText(String.valueOf(cityStockArrayList.get(2).getCommodityPrice()));
 
         pick1 = findViewById(R.id.spinner);
         pick1.setAdapter(adapter);
@@ -92,26 +93,24 @@ public class merchantInteractionUserBuysRubya2 extends AppCompatActivity impleme
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         int qty = (int) Integer.parseInt((String) parent.getItemAtPosition(position));
         if (pick1.equals(parent)) {
-            itemPrice = cityStockArrayList.get(2).commodityPrice;
+            itemPrice = cityStockArrayList.get(0).commodityPrice;
             priceXqty1 = qty * itemPrice;
-        }
-        else if (pick2.equals(parent)){
-            itemPrice = cityStockArrayList.get(3).commodityPrice;
+        } else if (pick2.equals(parent)) {
+            itemPrice = cityStockArrayList.get(1).commodityPrice;
             priceXqty2 = qty * itemPrice;
-        }
-        else if (pick3.equals(parent)){
-            itemPrice = cityStockArrayList.get(4).commodityPrice;
+        } else if (pick3.equals(parent)) {
+            itemPrice = cityStockArrayList.get(2).commodityPrice;
             priceXqty3 = qty * itemPrice;
         }
-        totalPurchase = priceXqty1 + priceXqty2 + priceXqty3;
-        totalToPurchase.setText(String.valueOf(totalPurchase));
+            totalPurchase = priceXqty1 + priceXqty2 + priceXqty3;
+            totalToPurchase.setText(String.valueOf(totalPurchase));
     }
 
-    private void completeTransaction() {
+    private void completeBuy() {
         playerPurse -= totalPurchase;
         player.setPlayerPurse(playerPurse);
         if (playerPurse <= 0){
-            startActivity(new Intent(merchantInteractionUserBuysRubya2.this, gameOver.class));
+            startActivity(new Intent(merchantInteractionUserBuysJadeEmpire1.this, gameOver.class));
         }
         playerGold.setText(String.valueOf(playerPurse));
 
@@ -122,19 +121,21 @@ public class merchantInteractionUserBuysRubya2 extends AppCompatActivity impleme
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(merchantInteractionUserBuysRubya2.this,
-                        merchantInteractionUserSellsRubya2.class));
+                startActivity(new Intent(merchantInteractionUserBuysJadeEmpire1.this,
+                        merchantInteractionUserSellsJadeEmpire1.class));
             }
         });
         builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 builder.setMessage("Thanks for trading! Come again soon!");
-                startActivity(new Intent(merchantInteractionUserBuysRubya2.this, cityTravel.class));
+                startActivity(new Intent(merchantInteractionUserBuysJadeEmpire1.this,
+                        merchantInteractionUserBuysJadeEmpire2.class));
             }
         });
         builder.show();
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         parent.getItemIdAtPosition(0);

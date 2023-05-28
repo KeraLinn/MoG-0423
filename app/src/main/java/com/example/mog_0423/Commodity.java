@@ -11,6 +11,7 @@ class Commodity {
     int commodityPrice;
     int commodityImage;
     int qtyAvail = 10;
+
     Map<String,String> mapCommodityLocation = new HashMap<>();
     Map<String, Integer> mapCommodityDrawables = new HashMap<>();
     ArrayList<Commodity> opalancyCommodityArrayList = new ArrayList<>();
@@ -26,11 +27,12 @@ class Commodity {
     ArrayList<Commodity> startingInventoryArrayList = new ArrayList<>();
 
     public Commodity(String commodityName, String commodityLocation, int commodityPrice,
-                     int commodityImage) {
+                     int commodityImage, int qtyAvail) {
         this.commodityName = commodityName;
         this.commodityLocation = commodityLocation;
         this.commodityPrice = commodityPrice;
         this.commodityImage = commodityImage;
+        this.qtyAvail = qtyAvail;
     }
 
     public String getCommodityName() {
@@ -51,152 +53,155 @@ class Commodity {
         return commodityImage;
     }
 
+    public void setQtyAvail(int qtyAvail) {
+        this.qtyAvail = qtyAvail;
+    }
     public int getQuantityAvailable() { return qtyAvail;  }
 
     public ArrayList<Commodity> getStartingInventoryArrayList() {
         startingInventoryArrayList.add(new Commodity("Mango","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_mango_100));
+                R.drawable.icons8_mango_100,getQuantityAvailable()));
         startingInventoryArrayList.add(new Commodity("Potato","Agatia",getCommodityPrice(),
-                R.drawable.icons8_potato_100));
+                R.drawable.icons8_potato_100,getQuantityAvailable()));
         startingInventoryArrayList.add(new Commodity("Orange","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_orange_100));
+                R.drawable.icons8_orange_100,getQuantityAvailable()));
         return startingInventoryArrayList;
     }
 
     public ArrayList<Commodity> getOpalancyCommodityArrayList() {
         opalancyCommodityArrayList.add(new Commodity("Apples","Opalancy", getCommodityPrice(),
-                R.drawable.icons8_apples_plate_100));
+                R.drawable.icons8_apples_plate_100,getQuantityAvailable()));
         opalancyCommodityArrayList.add(new Commodity("Mango","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_mango_100));
+                R.drawable.icons8_mango_100,getQuantityAvailable()));
         opalancyCommodityArrayList.add(new Commodity("Dragonfruit","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_dragon_fruit_100));
+                R.drawable.icons8_dragon_fruit_100,getQuantityAvailable()));
         opalancyCommodityArrayList.add(new Commodity("Orange","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_orange_100));
+                R.drawable.icons8_orange_100,getQuantityAvailable()));
         opalancyCommodityArrayList.add(new Commodity("Coconut","Opalancy",getCommodityPrice(),
-                R.drawable.icons8_coconut_100));
+                R.drawable.icons8_coconut_100,getQuantityAvailable()));
         return opalancyCommodityArrayList;
     }
     public ArrayList<Commodity> getRubyaCommodityArrayList() {
         rubyaCommodityArrayList.add(new Commodity("Blueberries","Rubya",getCommodityPrice(),
-                R.drawable.icons8_blueberry_100));
+                R.drawable.icons8_blueberry_100,getQuantityAvailable()));
         rubyaCommodityArrayList.add(new Commodity("Strawberry","Rubya",getCommodityPrice(),
-                R.drawable.icons8_strawberry_100));
+                R.drawable.icons8_strawberry_100,getQuantityAvailable()));
         rubyaCommodityArrayList.add(new Commodity("Cherry","Rubya",getCommodityPrice(),
-                R.drawable.icons8_cherry_100));
+                R.drawable.icons8_cherry_100,getQuantityAvailable()));
         rubyaCommodityArrayList.add(new Commodity("Raspberry","Rubya", getCommodityPrice(),
-                R.drawable.icons8_raspberry_100));
+                R.drawable.icons8_raspberry_100,getQuantityAvailable()));
         rubyaCommodityArrayList.add(new Commodity("Oats","Rubya",getCommodityPrice(),
-                R.drawable.icons8_rolled_oats_100));
+                R.drawable.icons8_rolled_oats_100,getQuantityAvailable()));
         rubyaCommodityArrayList.add(new Commodity("Asparagus","Rubya",getCommodityPrice(),
-                R.drawable.icons8_asparagus_100));
+                R.drawable.icons8_asparagus_100,getQuantityAvailable()));
         return rubyaCommodityArrayList;
     }
     public ArrayList<Commodity> getAgatiaCommodityArrayList() {
         agatiaCommodityArrayList.add(new Commodity("Tomato","Agatia", getCommodityPrice(),
-                R.drawable.icons8_tomato_100));
+                R.drawable.icons8_tomato_100,getQuantityAvailable()));
         agatiaCommodityArrayList.add(new Commodity("Pumpkin","Agatia",getCommodityPrice(),
-                R.drawable.icons8_pumpkin_100));
+                R.drawable.icons8_pumpkin_100,getQuantityAvailable()));
         agatiaCommodityArrayList.add(new Commodity("Squash","Agatia",getCommodityPrice(),
-                R.drawable.icons8_squash_100));
+                R.drawable.icons8_squash_100,getQuantityAvailable()));
         agatiaCommodityArrayList.add(new Commodity("White Beans","Agatia",getCommodityPrice(),
-                R.drawable.icons8_white_beans_100));
+                R.drawable.icons8_white_beans_100,getQuantityAvailable()));
         agatiaCommodityArrayList.add(new Commodity("Potato","Agatia",getCommodityPrice(),
-                R.drawable.icons8_potato_100));
+                R.drawable.icons8_potato_100,getQuantityAvailable()));
         return agatiaCommodityArrayList;
     }
     public ArrayList<Commodity> getAmethystCityCommodityArrayList() {
         amethystCityCommodityArrayList.add(new Commodity("Pomegranate","Amethyst City",
                 getCommodityPrice(),
-                R.drawable.icons8_pomegranate_100));
+                R.drawable.icons8_pomegranate_100,getQuantityAvailable()));
         amethystCityCommodityArrayList.add(new Commodity("Plum","Amethyst City",getCommodityPrice(),
-                R.drawable.icons8_plum_100));
+                R.drawable.icons8_plum_100,getQuantityAvailable()));
         amethystCityCommodityArrayList.add(new Commodity("Pear","Amethyst City",getCommodityPrice(),
-                R.drawable.icons8_pear_100));
+                R.drawable.icons8_pear_100,getQuantityAvailable()));
         amethystCityCommodityArrayList.add(new Commodity("Pineapple","Amethyst City",getCommodityPrice(),
-                R.drawable.icons8_pineapple_100));
+                R.drawable.icons8_pineapple_100,getQuantityAvailable()));
         amethystCityCommodityArrayList.add(new Commodity("Banana","Amethyst City",getCommodityPrice(),
-                R.drawable.icons8_banana_100));
+                R.drawable.icons8_banana_100,getQuantityAvailable()));
         return amethystCityCommodityArrayList;
     }
     public ArrayList<Commodity> getOnyxCoastCommodityArrayList() {
         onyxCoastCommodityArrayList.add(new Commodity("Eggplant","Onyx Coast", getCommodityPrice(),
-                R.drawable.icons8_eggplant_100));
+                R.drawable.icons8_eggplant_100,getQuantityAvailable()));
         onyxCoastCommodityArrayList.add(new Commodity("Cashews","Onyx Coast",getCommodityPrice(),
-                R.drawable.icons8_cashew_100));
+                R.drawable.icons8_cashew_100,getQuantityAvailable()));
         onyxCoastCommodityArrayList.add(new Commodity("Peanuts","Onyx Coast",getCommodityPrice(),
-                R.drawable.icons8_peanuts_100));
+                R.drawable.icons8_peanuts_100,getQuantityAvailable()));
         onyxCoastCommodityArrayList.add(new Commodity("Hazelnut","Onyx Coast",getCommodityPrice(),
-                R.drawable.icons8_hazelnut_100));
+                R.drawable.icons8_hazelnut_100,getQuantityAvailable()));
         onyxCoastCommodityArrayList.add(new Commodity("Pecan","Onyx Coast",getCommodityPrice(),
-                R.drawable.icons8_pecan_100));
+                R.drawable.icons8_pecan_100,getQuantityAvailable()));
         return onyxCoastCommodityArrayList;
     }
     public ArrayList<Commodity> getJadeEmpireCommodityArrayList() {
         jadeEmpireCommodityArrayList.add(new Commodity("Corn","Jade Empire", getCommodityPrice(),
-                R.drawable.icons8_corn_100));
+                R.drawable.icons8_corn_100,getQuantityAvailable()));
         jadeEmpireCommodityArrayList.add(new Commodity("Flax","Jade Empire",getCommodityPrice(),
-                R.drawable.icons8_flax_seeds_100));
+                R.drawable.icons8_flax_seeds_100,getQuantityAvailable()));
         jadeEmpireCommodityArrayList.add(new Commodity("Lentils","Jade Empire",getCommodityPrice(),
-                R.drawable.icons8_lentil_100));
+                R.drawable.icons8_lentil_100,getQuantityAvailable()));
         jadeEmpireCommodityArrayList.add(new Commodity("Lettuce","Jade Empire",getCommodityPrice(),
-                R.drawable.icons8_lettuce_100));
+                R.drawable.icons8_lettuce_100,getQuantityAvailable()));
         jadeEmpireCommodityArrayList.add(new Commodity("Bok Choy","Jade Empire",getCommodityPrice(),
-                R.drawable.icons8_bok_choy_100));
+                R.drawable.icons8_bok_choy_100,getQuantityAvailable()));
         return jadeEmpireCommodityArrayList;
     }
     public ArrayList<Commodity> getDiamondariaCommodityArrayList() {
         diamondariaCommodityArrayList.add(new Commodity("Broccoli","Diamnondaria", getCommodityPrice(),
-                R.drawable.icons8_broccoli_100));
+                R.drawable.icons8_broccoli_100,getQuantityAvailable()));
         diamondariaCommodityArrayList.add(new Commodity("Cauliflower","Diamnondaria",
                 getCommodityPrice(),
-                R.drawable.icons8_cauliflower_100));
+                R.drawable.icons8_cauliflower_100,getQuantityAvailable()));
         diamondariaCommodityArrayList.add(new Commodity("Artichoke","Diamnondaria",
                 getCommodityPrice(),
-                R.drawable.icons8_artichoke_100));
+                R.drawable.icons8_artichoke_100,getQuantityAvailable()));
         diamondariaCommodityArrayList.add(new Commodity("Cabbage","Diamnondaria",getCommodityPrice(),
-                R.drawable.icons8_cabbage_100));
+                R.drawable.icons8_cabbage_100,getQuantityAvailable()));
         diamondariaCommodityArrayList.add(new Commodity("Purple Cabbage","Diamnondaria",
                 getCommodityPrice(),
-                R.drawable.icons8_purple_cabbage_96));
+                R.drawable.icons8_purple_cabbage_96,getQuantityAvailable()));
         return diamondariaCommodityArrayList;
     }
     public ArrayList<Commodity> getEmeraldisCommodityArrayList() {
         emeraldisCommodityArrayList.add(new Commodity("Beet","Emeraldis", getCommodityPrice(),
-                R.drawable.icons8_beet_100));
+                R.drawable.icons8_beet_100,getQuantityAvailable()));
         emeraldisCommodityArrayList.add(new Commodity("Mushroom","Emeraldis",getCommodityPrice(),
-                R.drawable.icons8_mushroom_100));
+                R.drawable.icons8_mushroom_100,getQuantityAvailable()));
         emeraldisCommodityArrayList.add(new Commodity("Garlic","Emeraldis",getCommodityPrice(),
-                R.drawable.icons8_garlic_100));
+                R.drawable.icons8_garlic_100,getQuantityAvailable()));
         emeraldisCommodityArrayList.add(new Commodity("Carrots","Emeraldis",getCommodityPrice(),
-                R.drawable.basket_of_carrots));
+                R.drawable.basket_of_carrots,getQuantityAvailable()));
         emeraldisCommodityArrayList.add(new Commodity("Radish","Emeraldis",getCommodityPrice(),
-                R.drawable.icons8_radish_100));
+                R.drawable.icons8_radish_100,getQuantityAvailable()));
         return emeraldisCommodityArrayList;
     }
     public ArrayList<Commodity> getSapphiraCommodityArrayList() {
         sapphiraCommodityArrayList.add(new Commodity("Onion","Sapphira", getCommodityPrice(),
-                R.drawable.icons8_onion_100));
+                R.drawable.icons8_onion_100,getQuantityAvailable()));
         sapphiraCommodityArrayList.add(new Commodity("Grapes","Sapphira",getCommodityPrice(),
-                R.drawable.icons8_grapes_100));
+                R.drawable.icons8_grapes_100,getQuantityAvailable()));
         sapphiraCommodityArrayList.add(new Commodity("Peas","Sapphira",getCommodityPrice(),
-                R.drawable.icons8_peas_100));
+                R.drawable.icons8_peas_100,getQuantityAvailable()));
         sapphiraCommodityArrayList.add(new Commodity("Leek","Sapphira",getCommodityPrice(),
-                R.drawable.icons8_leek_100));
+                R.drawable.icons8_leek_100,getQuantityAvailable()));
         sapphiraCommodityArrayList.add(new Commodity("Celery","Sapphira",getCommodityPrice(),
-                R.drawable.icons8_celery_100));
+                R.drawable.icons8_celery_100,getQuantityAvailable()));
         return sapphiraCommodityArrayList;
     }
     public ArrayList<Commodity> getTourmalinaCommodityArrayList() {
         tourmalinaCommodityArrayList.add(new Commodity("Apricot","Tourmalina", getCommodityPrice(),
-                R.drawable.icons8_apricot_100));
+                R.drawable.icons8_apricot_100,getQuantityAvailable()));
         tourmalinaCommodityArrayList.add(new Commodity("Olive","Tourmalina",getCommodityPrice(),
-                R.drawable.icons8_olive_100));
+                R.drawable.icons8_olive_100,getQuantityAvailable()));
         tourmalinaCommodityArrayList.add(new Commodity("Peach","Tourmalina",getCommodityPrice(),
-                R.drawable.icons8_peach_100));
+                R.drawable.icons8_peach_100,getQuantityAvailable()));
         tourmalinaCommodityArrayList.add(new Commodity("Zucchini","Tourmalina",getCommodityPrice(),
-                R.drawable.icons8_zucchini_100));
+                R.drawable.icons8_zucchini_100,getQuantityAvailable()));
         tourmalinaCommodityArrayList.add(new Commodity("Bell Pepper","Tourmalina",getCommodityPrice(),
-                R.drawable.icons8_bell_pepper_100));
+                R.drawable.icons8_bell_pepper_100,getQuantityAvailable()));
         return tourmalinaCommodityArrayList;
     }
 

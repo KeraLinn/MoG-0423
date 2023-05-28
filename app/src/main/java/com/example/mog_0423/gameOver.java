@@ -17,9 +17,9 @@ public class gameOver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (purse <= 0) {
-            player.selectTrack(R.raw.game_lost);
             setContentView(R.layout.screen_game_lost);
-            //player = MediaPlayer.create(gameOver.this, R.raw.game_lost);
+            player = MediaPlayer.create(gameOver.this, R.raw.game_lost);
+            player.setVolume(50,50);
             player.start();
         }
         else {

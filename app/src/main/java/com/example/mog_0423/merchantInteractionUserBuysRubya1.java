@@ -30,7 +30,7 @@ public class merchantInteractionUserBuysRubya1 extends AppCompatActivity impleme
     int itemPrice;
     int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
-    Commodity commodity = new Commodity("","",0,0);
+    Commodity commodity = new Commodity("","",0,0,0);
     ArrayList<Commodity> cityStockArrayList = commodity.getRubyaCommodityArrayList();
     ArrayAdapter<CharSequence> adapter;
 
@@ -121,9 +121,8 @@ public class merchantInteractionUserBuysRubya1 extends AppCompatActivity impleme
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //userSells();
                 startActivity(new Intent(merchantInteractionUserBuysRubya1.this,
-                        merchantInteractionUserSells.class));
+                        merchantInteractionUserSellsRubya1.class));
             }
         });
         builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {

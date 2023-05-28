@@ -30,7 +30,7 @@ public class merchantInteractionUserBuysAgatia extends AppCompatActivity impleme
     int itemPrice;
     int priceXqty1, priceXqty2, priceXqty3;
     playerClass player = new playerClass();
-    Commodity commodity = new Commodity("","",0,0);
+    Commodity commodity = new Commodity("","",0,0,0);
     ArrayList<Commodity> cityStockArrayList = commodity.getAgatiaCommodityArrayList();
     ArrayAdapter<CharSequence> adapter;
 
@@ -123,7 +123,7 @@ public class merchantInteractionUserBuysAgatia extends AppCompatActivity impleme
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startActivity(new Intent(merchantInteractionUserBuysAgatia.this,
-                        merchantInteractionUserSells.class));
+                        merchantInteractionUserSellsAgatia.class));
             }
         });
         builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
