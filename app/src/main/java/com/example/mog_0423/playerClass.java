@@ -12,13 +12,6 @@ public class playerClass extends createNewGame {
     private static int playerPurse = 500;
     String winParameter;
 
-    /*public playerClass(String playerName, int playerAvatar, int playerPurse, int difficultyLevel) {
-        this.playerName = playerName;
-        this.playerAvatar = playerAvatar;
-        this.playerPurse = playerPurse;
-        this.difficultyLevel = difficultyLevel;
-    }*/
-
     public String getWinParameter() {
         return winParameter;
     }

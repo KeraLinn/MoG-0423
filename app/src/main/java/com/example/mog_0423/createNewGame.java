@@ -26,7 +26,6 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_new_game);
 
-
     //region findViewByIds
         userInputName = findViewById(R.id.editTextTextPersonName2);
         Button completeButton = findViewById(R.id.startButton);
@@ -107,7 +106,7 @@ public class createNewGame extends AppCompatActivity implements AdapterView.OnIt
         }
         player = new playerClass();
         player.playerAvatar = profileImage;
-        player.setPlayerPurse(playerGold);// = playerGold;
+        player.setPlayerPurse(playerGold);
         player.difficultyLevel = chosenDifficultyLevel;
         player.playerName = userName;
     }
